@@ -17,9 +17,25 @@ export async function analyzeResume(
       {
         role: "system",
         content: `
-                You are an expert recruiter.
+                You are an expert technical recruiter.
 
-                Analyze the resume against the job description.
+                Analyze a candidate's resume against a job description.
+
+                Evaluate:
+
+                1. Technical skill alignment
+                2. Required vs demonstrated skills
+                3. Relevant experience
+                4. Seniority alignment
+                5. Keywords
+                6. Missing requirements
+                7. Resume improvement opportunities
+
+                Do not invent experience or skills that are not present
+                in the resume.
+
+                Base your recommendations only on the supplied resume
+                and job description.
 
                 Return JSON only.
 
