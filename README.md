@@ -12,6 +12,27 @@ frontend/  React, TypeScript, Vite, Ant Design, and Tailwind UI
 bruno/     Bruno collection for testing the API
 ```
 
+## Application architecture
+
+```mermaid
+flowchart LR
+	User[User] --> Frontend[React frontend\nAzure Static Web Apps]
+	Frontend -->|Axios multipart/form-data| Function[Azure Function\nAnalyzeResume]
+	Function -->|Store PDF| Blob[Azure Blob Storage]
+	Function -->|Extract text| Document[Azure Document Intelligence]
+	Function -->|Resume text + job description| Foundry[Azure AI Foundry\nGPT deployment]
+	Foundry -->|Structured JSON analysis| Function
+	Function -->|Analysis response| Frontend
+```
+
+The application is split into two deployable layers:
+
+- **Frontend:** A Vite-powered React and TypeScript single-page application hosted on Azure Static Web Apps. It handles PDF selection, job-description input, loading and error states, and result presentation. The Azure Function URL is supplied through `VITE_AZURE_FUNCTION_URL`.
+- **API:** A Node.js Azure Functions v4 HTTP API hosted in the `analyze-resume` Function App. It validates the multipart request, uploads the PDF, extracts resume text, calls Azure AI Foundry, and returns typed JSON.
+- **Storage and AI services:** Blob Storage retains the uploaded PDF, Document Intelligence performs OCR and text extraction, and Azure AI Foundry evaluates the resume against the job description.
+
+The browser communicates only with the HTTP Function endpoint. Azure credentials remain server-side in Function App environment variables; the frontend exposes only its public API URL.
+
 ## How it works
 
 1. The user drops a PDF resume into the frontend.
