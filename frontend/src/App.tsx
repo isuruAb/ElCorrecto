@@ -1,8 +1,10 @@
 import { useState } from 'react'
 import type { ReactNode } from 'react'
+import { useAuth0 } from '@auth0/auth0-react'
 import { ArrowRight, Check, FileText, X } from 'lucide-react'
 import { Alert, Button, Card, ConfigProvider, Input, Progress, Upload } from 'antd'
 import axios from 'axios'
+import { Header } from './components/Header'
 
 type Analysis = {
   matchScore: number
@@ -17,6 +19,7 @@ const blue = '#1f5b83'
 const line = 'rgba(23, 43, 58, .16)'
 
 function App() {
+  const { isAuthenticated, loginWithRedirect } = useAuth0()
   const [resume, setResume] = useState<File | null>(null)
   const [jobDescription, setJobDescription] = useState('')
   const [analysis, setAnalysis] = useState<Analysis | null>(null)
@@ -37,6 +40,10 @@ function App() {
   const analyze = async () => {
     if (!resume || !jobDescription.trim()) {
       setError('Add a PDF resume and a job description to continue.')
+      return
+    }
+    if (!isAuthenticated) {
+      await loginWithRedirect({ appState: { returnTo: window.location.pathname } })
       return
     }
     if (!functionUrl) {
@@ -74,23 +81,7 @@ function App() {
       }}
     >
       <main className="min-h-screen bg-[radial-gradient(circle_at_90%_4%,#c9dce7_0,transparent_24%),linear-gradient(135deg,#f7f3ec_0%,#f4efe7_58%,#ebe5dc_100%)] px-[clamp(22px,6vw,92px)] text-[#253541]">
-        <header className="flex items-center gap-3.5 border-b py-7" style={{ borderColor: line }}>
-          <div className="grid size-10 place-items-center bg-[#172b3a] font-mono text-[13px] font-semibold text-[#f7f3ec]">
-            EC
-          </div>
-          <div>
-            <p className="font-mono text-[11px] font-medium tracking-[1.2px] text-[#756e68]">
-              EL CORRECTO / TALENT INTELLIGENCE
-            </p>
-            <h1 className="m-0 mt-0.5 text-[17px] font-semibold tracking-normal text-[#172b3a]">
-              Resume match lab
-            </h1>
-          </div>
-          <div className="ml-auto flex items-center gap-2 text-xs text-[#172b3a]">
-            <span className="size-1.5 rounded-full bg-[#4c9270] shadow-[0_0_0_4px_#dbe8dc]" /> Azure
-            connected
-          </div>
-        </header>
+        <Header />
         <section className="max-w-[620px] pb-[62px] pt-[clamp(58px,9vw,112px)]">
           <p className="m-0 font-mono text-[11px] font-medium tracking-[1.2px] text-[#756e68]">
             CV ANALYSIS / 01
