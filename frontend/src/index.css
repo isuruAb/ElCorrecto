@@ -3,12 +3,20 @@
 :root {
   --navy: #172b3a;
   --ink: #253541;
-  --coral: #1f5b83;
+  --blue: #1f5b83;
   --muted: #756e68;
+  --border: #9db6c5;
   --line: rgba(23, 43, 58, 0.16);
+  --cream-light: #f7f3ec;
+  --cream: #f4efe7;
+  --cream-dark: #ebe5dc;
+  --sky: #c9dce7;
+  --positive: #6eaa7c;
+  --steel: #527a95;
+
   font-family: 'DM Sans', sans-serif;
   color: var(--ink);
-  background: #f4efe7;
+  background: var(--cream);
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;

@@ -17,8 +17,10 @@ type Analysis = {
 }
 
 const functionUrl = import.meta.env.VITE_AZURE_FUNCTION_URL
+// antd computes hover/active tints from colorPrimary at theme-build time, so it
+// needs a literal color value here rather than a CSS var (kept in sync with --blue).
 const blue = '#1f5b83'
-const line = 'rgba(23, 43, 58, .16)'
+const line = 'var(--line)'
 
 const AnalysePage = () => {
   const { isAuthenticated, loginWithRedirect, getAccessTokenSilently } = useAuth0()
@@ -88,18 +90,18 @@ const AnalysePage = () => {
         token: { colorPrimary: blue, borderRadius: 0, fontFamily: "'DM Sans', sans-serif" },
       }}
     >
-      <main className="min-h-screen bg-[radial-gradient(circle_at_90%_4%,#c9dce7_0,transparent_24%),linear-gradient(135deg,#f7f3ec_0%,#f4efe7_58%,#ebe5dc_100%)] px-[clamp(22px,6vw,92px)] text-[#253541]">
+      <main className="min-h-screen bg-[radial-gradient(circle_at_90%_4%,var(--sky)_0,transparent_24%),linear-gradient(135deg,var(--cream-light)_0%,var(--cream)_58%,var(--cream-dark)_100%)] px-[clamp(22px,6vw,92px)] text-(--ink)">
         <Header />
         <section className="max-w-[620px] pb-[62px] pt-[clamp(58px,9vw,112px)]">
-          <p className="m-0 font-mono text-[11px] font-medium tracking-[1.2px] text-[#756e68]">
+          <p className="m-0 font-mono text-[11px] font-medium tracking-[1.2px] text-(--muted)">
             {t('analyse.kicker')}
           </p>
-          <h2 className="m-[13px_0_18px] font-serif text-[clamp(42px,6vw,74px)] font-semibold leading-[.98] tracking-[-1px] text-[#172b3a]">
+          <h2 className="m-[13px_0_18px] font-serif text-[clamp(42px,6vw,74px)] font-semibold leading-[.98] tracking-[-1px] text-(--navy)">
             {t('analyse.titleLine1')}
             <br />
-            <em className="text-[#1f5b83]">{t('analyse.titleEmphasis')}</em>
+            <em className="text-(--blue)">{t('analyse.titleEmphasis')}</em>
           </h2>
-          <p className="max-w-[420px] text-base leading-[1.65] text-[#756e68]">
+          <p className="max-w-[420px] text-base leading-[1.65] text-(--muted)">
             {t('analyse.description')}
           </p>
         </section>
@@ -122,14 +124,14 @@ const AnalysePage = () => {
                 return false
               }}
               showUploadList={false}
-              className="min-h-[215px] flex-1 overflow-hidden [&_.ant-upload.ant-upload-drag]:box-border [&_.ant-upload.ant-upload-drag]:h-full [&_.ant-upload.ant-upload-drag]:min-h-0 [&_.ant-upload.ant-upload-drag]:rounded-none [&_.ant-upload.ant-upload-drag]:border-[#9db6c5] [&_.ant-upload.ant-upload-drag]:bg-white/50 [&_.ant-upload-drag-container]:flex [&_.ant-upload-drag-container]:h-full [&_.ant-upload-drag-container]:flex-col [&_.ant-upload-drag-container]:items-center [&_.ant-upload-drag-container]:justify-center [&_.ant-upload-drag-container]:gap-2.5 [&_.ant-upload-drag-container]:text-[#1f5b83]"
+              className="min-h-[215px] flex-1 overflow-hidden [&_.ant-upload.ant-upload-drag]:box-border [&_.ant-upload.ant-upload-drag]:h-full [&_.ant-upload.ant-upload-drag]:min-h-0 [&_.ant-upload.ant-upload-drag]:rounded-none [&_.ant-upload.ant-upload-drag]:border-(--border) [&_.ant-upload.ant-upload-drag]:bg-white/50 [&_.ant-upload-drag-container]:flex [&_.ant-upload-drag-container]:h-full [&_.ant-upload-drag-container]:flex-col [&_.ant-upload-drag-container]:items-center [&_.ant-upload-drag-container]:justify-center [&_.ant-upload-drag-container]:gap-2.5 [&_.ant-upload-drag-container]:text-(--blue)"
             >
               <div className="flex flex-col items-center gap-2.5 text-center">
                 <FileText size={34} strokeWidth={1.5} />
-                <p className="!m-0 !text-[15px] !text-[#172b3a]">
+                <p className="!m-0 !text-[15px] text-(--navy)!">
                   {resume ? resume.name : t('analyse.dropPrompt')}
                 </p>
-                <p className="!m-0 !text-xs !text-[#756e68]">
+                <p className="!m-0 !text-xs text-(--muted)!">
                   {resume
                     ? t('analyse.fileReady', { size: (resume.size / 1024 / 1024).toFixed(2) })
                     : t('analyse.dropHint')}
@@ -138,7 +140,7 @@ const AnalysePage = () => {
             </Upload.Dragger>
             {resume && (
               <Button
-                className="mt-3 h-auto p-0 text-[#1f5b83]"
+                className="mt-3 h-auto p-0 text-(--blue)"
                 type="link"
                 icon={<X size={14} />}
                 onClick={() => setResume(null)}
@@ -146,12 +148,12 @@ const AnalysePage = () => {
                 {t('analyse.removeFile')}
               </Button>
             )}
-            <p className="mt-[18px] text-xs text-[#756e68]">{t('analyse.secureNote')}</p>
+            <p className="mt-[18px] text-xs text-(--muted)">{t('analyse.secureNote')}</p>
           </div>
           <div className="border bg-white/60 p-[27px]" style={{ borderColor: line }}>
             <PanelHeading number="02" title={t('analyse.jobPanelTitle')} />
             <Input.TextArea
-              className="!min-h-[244px] !rounded-none !border-[#9db6c5] !p-4 !text-[15px] !leading-[1.6] !text-[#172b3a]"
+              className="!min-h-[244px] !rounded-none border-(--border)! !p-4 !text-[15px] !leading-[1.6] text-(--navy)!"
               value={jobDescription}
               onChange={(event) => {
                 setJobDescription(event.target.value)
@@ -160,14 +162,14 @@ const AnalysePage = () => {
               placeholder={t('analyse.jobPlaceholder')}
               autoSize={{ minRows: 8, maxRows: 14 }}
             />
-            <div className="mt-2 text-right text-xs text-[#756e68]">
+            <div className="mt-2 text-right text-xs text-(--muted)">
               {t('analyse.characterCount', { count: jobDescription.length })}
             </div>
           </div>
           <div className="flex min-h-[62px] items-center justify-end gap-5">
             <div className="h-px flex-1" style={{ backgroundColor: line }} />
             <Button
-              className="!h-auto !rounded-none !bg-[#1f5b83] !px-[18px] !py-[15px] !font-mono !text-[13px] !font-semibold !text-white !shadow-none"
+              className="!h-auto !rounded-none bg-(--blue)! !px-[18px] !py-[15px] !font-mono !text-[13px] !font-semibold !text-white !shadow-none"
               type="primary"
               onClick={analyze}
               loading={isLoading}
@@ -193,14 +195,14 @@ const AnalysePage = () => {
           >
             <div className="mb-[27px] flex items-end justify-between">
               <div>
-                <p className="font-mono text-[11px] font-medium tracking-[1.2px] text-[#756e68]">
+                <p className="font-mono text-[11px] font-medium tracking-[1.2px] text-(--muted)">
                   {t('analyse.resultsKicker')}
                 </p>
-                <h2 className="m-[13px_0_0] font-serif text-[clamp(34px,5vw,54px)] font-semibold leading-none text-[#172b3a]">
+                <h2 className="m-[13px_0_0] font-serif text-[clamp(34px,5vw,54px)] font-semibold leading-none text-(--navy)">
                   {t('analyse.resultsTitle')}
                 </h2>
               </div>
-              <div className="flex items-center gap-2 text-[#756e68]">
+              <div className="flex items-center gap-2 text-(--muted)">
                 <Progress
                   type="circle"
                   percent={analysis.matchScore}
@@ -213,13 +215,13 @@ const AnalysePage = () => {
             </div>
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
               <Card
-                className="!rounded-none !border !border-[#172b3a]/15 !bg-white/60 !shadow-none xl:col-span-1"
+                className="!rounded-none !border border-(--navy)/15! !bg-white/60 !shadow-none xl:col-span-1"
                 bordered={false}
               >
-                <p className="font-mono text-[11px] font-medium uppercase tracking-[1.2px] text-[#756e68]">
+                <p className="font-mono text-[11px] font-medium uppercase tracking-[1.2px] text-(--muted)">
                   {t('analyse.recruiterRead')}
                 </p>
-                <p className="mt-[18px] leading-[1.55] text-[#172b3a]">{analysis.summary}</p>
+                <p className="mt-[18px] leading-[1.55] text-(--navy)">{analysis.summary}</p>
               </Card>
               <ResultList
                 title={t('analyse.matchedSkills')}
@@ -243,7 +245,7 @@ const AnalysePage = () => {
           </section>
         )}
         <footer
-          className="flex justify-between border-t py-5 pb-7 font-mono text-[10px] tracking-[1px] text-[#756e68]"
+          className="flex justify-between border-t py-5 pb-7 font-mono text-[10px] tracking-[1px] text-(--muted)"
           style={{ borderColor: line }}
         >
           <span>{t('common.brand')}</span>
@@ -257,8 +259,8 @@ const AnalysePage = () => {
 const PanelHeading = ({ number, title }: { number: string; title: string }) => {
   return (
     <div className="mb-7 flex items-center gap-[11px]">
-      <span className="font-mono text-xs font-medium text-[#1f5b83]">{number}</span>
-      <h3 className="m-0 text-lg font-semibold text-[#172b3a]">{title}</h3>
+      <span className="font-mono text-xs font-medium text-(--blue)">{number}</span>
+      <h3 className="m-0 text-lg font-semibold text-(--navy)">{title}</h3>
     </div>
   )
 }
@@ -276,18 +278,18 @@ const ResultList = ({
 }) => {
   const toneClass =
     tone === 'positive'
-      ? 'border-t-[#6eaa7c]'
+      ? 'border-t-(--positive)'
       : tone === 'negative'
-        ? 'border-t-[#1f5b83]'
-        : 'border-t-[#527a95]'
+        ? 'border-t-(--blue)'
+        : 'border-t-(--steel)'
   return (
     <article
-      className={`min-h-[155px] border border-[#172b3a]/15 border-t-[3px] bg-white/60 p-[22px] ${toneClass}`}
+      className={`min-h-[155px] border border-(--navy)/15 border-t-[3px] bg-white/60 p-[22px] ${toneClass}`}
     >
-      <p className="font-mono text-[11px] font-medium uppercase tracking-[1.2px] text-[#756e68]">
+      <p className="font-mono text-[11px] font-medium uppercase tracking-[1.2px] text-(--muted)">
         {title}
       </p>
-      <ul className="mt-[18px] grid gap-2.5 p-0 text-[13px] leading-[1.35] text-[#172b3a]">
+      <ul className="mt-[18px] grid gap-2.5 p-0 text-[13px] leading-[1.35] text-(--navy)">
         {items.map((item, index) => (
           <li className="flex items-start gap-2" key={`${item}-${index}`}>
             {icon}
