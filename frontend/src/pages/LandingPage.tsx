@@ -2,6 +2,7 @@ import { ArrowRight } from 'lucide-react'
 import { Button } from 'antd'
 import { useNavigate } from 'react-router-dom'
 import { Header } from '../components/Header'
+import { ANALYSE_ROUTE } from '../constants/route'
 
 const line = 'rgba(23, 43, 58, .16)'
 
@@ -27,7 +28,7 @@ const LandingPage = () => {
         <Button
           className="!mt-8 !h-auto !rounded-none !bg-[#1f5b83] !px-[18px] !py-[15px] !font-mono !text-[13px] !font-semibold !text-white !shadow-none"
           type="primary"
-          onClick={() => navigate('/analyse')}
+          onClick={() => navigate(ANALYSE_ROUTE)}
           icon={<ArrowRight size={18} />}
         >
           Open matcher

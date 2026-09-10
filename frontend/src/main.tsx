@@ -3,6 +3,7 @@ import { createRoot } from 'react-dom/client'
 import { Auth0Provider } from '@auth0/auth0-react'
 import './index.css'
 import App from './App.tsx'
+import { ANALYSE_ROUTE } from './constants/route'
 
 
 createRoot(document.getElementById('root')!).render(
@@ -12,7 +13,7 @@ createRoot(document.getElementById('root')!).render(
       clientId={import.meta.env.VITE_AUTH0_CLIENT_ID}
       cacheLocation="localstorage"
       authorizationParams={{
-        redirect_uri: `${window.location.origin}/analyse`,
+        redirect_uri: `${window.location.origin}${ANALYSE_ROUTE}`,
         max_age: 86400,
       }}
     >
