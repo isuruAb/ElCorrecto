@@ -5,10 +5,10 @@ const blobClient = BlobServiceClient.fromConnectionString(
   process.env.BLOB_CONNECTION_STRING!
 );
 
-export async function uploadResume(
+export const uploadResume = async (
   fileBuffer: Buffer,
   fileName: string
-) {
+): Promise<string> => {
   const container =
     blobClient.getContainerClient(
       process.env.BLOB_CONTAINER_NAME!

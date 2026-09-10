@@ -6,10 +6,10 @@ const client = new OpenAI({
   baseURL: process.env.AZURE_OPENAI_ENDPOINT?.replace(/\/responses\/?$/, "").replace(/\/$/, "") + "/",
 });
 
-export async function analyzeResume(
+export const analyzeResume = async (
   resumeText: string,
   jobDescription: string,
-): Promise<AnalysisResult> {
+): Promise<AnalysisResult> => {
   const response = await client.chat.completions.create({
     model: process.env.AZURE_OPENAI_DEPLOYMENT!,
 

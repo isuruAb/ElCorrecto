@@ -7,9 +7,9 @@ import { extractResumeText } from "../services/documentIntelligence";
 
 const MAX_RESUME_SIZE_BYTES = 10 * 1024 * 1024;
 
-export async function parseAnalyzeRequest(
+export const parseAnalyzeRequest = async (
   request: HttpRequest,
-): Promise<AnalyzeResumeRequest> {
+): Promise<AnalyzeResumeRequest> => {
   const contentType = request.headers.get("content-type");
   if (!contentType?.startsWith("multipart/form-data")) {
     throw new Error("Request must use multipart/form-data");
@@ -65,10 +65,10 @@ export async function parseAnalyzeRequest(
   };
 }
 
-export async function analyzeResumeHandler(
+export const analyzeResumeHandler = async (
   request: HttpRequest,
   context: InvocationContext,
-): Promise<HttpResponseInit> {
+): Promise<HttpResponseInit> => {
   try {
     const input = await parseAnalyzeRequest(request);
     const blobUrl = await uploadResume(input.resumeFile, input.fileName);

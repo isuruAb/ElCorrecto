@@ -8,7 +8,7 @@ const client = new DocumentAnalysisClient(
   new AzureKeyCredential(process.env.DOCUMENT_INTELLIGENCE_KEY!),
 );
 
-export async function extractResumeText(pdfBuffer: Buffer): Promise<string> {
+export const extractResumeText = async (pdfBuffer: Buffer): Promise<string> => {
   const poller = await client.beginAnalyzeDocument("prebuilt-read", pdfBuffer);
 
   const result = await poller.pollUntilDone();
