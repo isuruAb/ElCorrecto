@@ -1,6 +1,6 @@
 import Busboy from "busboy";
 import { app, HttpRequest, HttpResponseInit, InvocationContext } from "@azure/functions";
-import { AnalyzeResumeRequest } from "../types/analysis";
+import { AnalysisLanguage, AnalyzeResumeRequest } from "../types/analysis";
 import { analyzeResume as runAnalysis } from "../services/aiAnalyzer";
 import { uploadResume } from "../services/blobStorage";
 import { extractResumeText } from "../services/documentIntelligence";
@@ -24,6 +24,7 @@ export const parseAnalyzeRequest = async (
   let fileName = "";
   let mimeType = "";
   let jobDescription = "";
+  let language: AnalysisLanguage = "English";
   const body = Buffer.from(await request.arrayBuffer());
 
   await new Promise<void>((resolve, reject) => {
@@ -38,6 +39,9 @@ export const parseAnalyzeRequest = async (
     parser.on("field", (fieldName, value) => {
       if (fieldName === "jobDescription") {
         jobDescription = value;
+      }
+      if (fieldName === "language" && value === "Spanish") {
+        language = "Spanish";
       }
     });
 
@@ -62,6 +66,7 @@ export const parseAnalyzeRequest = async (
     resumeFile: Buffer.concat(chunks),
     fileName,
     jobDescription: jobDescription.trim(),
+    language,
   };
 }
 
@@ -73,7 +78,7 @@ export const analyzeResumeHandler = async (
     const input = await parseAnalyzeRequest(request);
     const blobUrl = await uploadResume(input.resumeFile, input.fileName);
     const resumeText = await extractResumeText(input.resumeFile);
-    const analysis = await runAnalysis(resumeText, input.jobDescription);
+    const analysis = await runAnalysis(resumeText, input.jobDescription, input.language);
 
     return {
       status: 200,

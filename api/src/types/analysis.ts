@@ -12,4 +12,5 @@ export interface AnalyzeResumeRequest {
   resumeFile: Buffer;
   fileName: string;
   jobDescription: string;
+  language: AnalysisLanguage;
 }
