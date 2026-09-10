@@ -5,6 +5,8 @@ import { analyzeResume as runAnalysis } from "../services/aiAnalyzer";
 import { uploadResume } from "../services/blobStorage";
 import { extractResumeText } from "../services/documentIntelligence";
 
+const MAX_RESUME_SIZE_BYTES = 10 * 1024 * 1024;
+
 export async function parseAnalyzeRequest(
   request: HttpRequest,
 ): Promise<AnalyzeResumeRequest> {
@@ -13,7 +15,11 @@ export async function parseAnalyzeRequest(
     throw new Error("Request must use multipart/form-data");
   }
 
-  const parser = Busboy({ headers: { "content-type": contentType } });
+  const parser = Busboy({
+    headers: { "content-type": contentType },
+    limits: { fileSize: MAX_RESUME_SIZE_BYTES, files: 1 },
+  });
+
   const chunks: Buffer[] = [];
   let fileName = "";
   let mimeType = "";
@@ -21,34 +27,41 @@ export async function parseAnalyzeRequest(
   const body = Buffer.from(await request.arrayBuffer());
 
   await new Promise<void>((resolve, reject) => {
-    parser.on("file", (field, file, info) => {
-      if (field !== "resume") {
-        file.resume();
-        return;
-      }
+    parser.on("file", (_fieldName, file, info) => {
       fileName = info.filename;
       mimeType = info.mimeType;
-      file.on("data", (data: Buffer) => chunks.push(data));
+
+      file.on("data", (chunk: Buffer) => chunks.push(chunk));
+      file.on("limit", () => reject(new Error("Resume PDF must be 10 MB or smaller")));
     });
-    parser.on("field", (name, value) => {
-      if (name === "jobDescription") jobDescription = value;
+
+    parser.on("field", (fieldName, value) => {
+      if (fieldName === "jobDescription") {
+        jobDescription = value;
+      }
     });
-    parser.on("finish", resolve);
-    parser.on("error", reject);
+
+    parser.once("error", reject);
+    parser.once("finish", resolve);
+
     parser.end(body);
   });
 
-  if (!fileName || mimeType !== "application/pdf") {
+  const isPdf =
+    mimeType === "application/pdf" || fileName.toLowerCase().endsWith(".pdf");
+
+  if (!fileName || !isPdf) {
     throw new Error("A PDF file is required in the resume field");
   }
+
   if (!jobDescription.trim()) {
-    throw new Error("jobDescription is required");
+    throw new Error("Job Description is required");
   }
 
   return {
     resumeFile: Buffer.concat(chunks),
     fileName,
-    jobDescription,
+    jobDescription: jobDescription.trim(),
   };
 }
 
@@ -64,13 +77,25 @@ export async function analyzeResumeHandler(
 
     return {
       status: 200,
-      jsonBody: { ...analysis, resumeFileName: input.fileName, resumeBlobUrl: blobUrl },
+      jsonBody: {
+        ...analysis,
+        resumeFileName: input.fileName,
+        resumeBlobUrl: blobUrl,
+      },
     };
   } catch (error) {
     context.error("Resume analysis failed", error);
+
     const message = error instanceof Error ? error.message : "Unexpected server error";
-    const status = message.includes("required") || message.includes("must use") ? 400 : 500;
-    return { status, jsonBody: { error: message } };
+    const isBadRequest =
+      message.includes("required") ||
+      message.includes("must use") ||
+      message.includes("10 MB");
+
+    return {
+      status: isBadRequest ? 400 : 500,
+      jsonBody: { error: message },
+    };
   }
 }
 

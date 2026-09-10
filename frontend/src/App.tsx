@@ -126,15 +126,17 @@ function App() {
               showUploadList={false}
               className="min-h-[215px] flex-1 overflow-hidden [&_.ant-upload.ant-upload-drag]:box-border [&_.ant-upload.ant-upload-drag]:h-full [&_.ant-upload.ant-upload-drag]:min-h-0 [&_.ant-upload.ant-upload-drag]:rounded-none [&_.ant-upload.ant-upload-drag]:border-[#9db6c5] [&_.ant-upload.ant-upload-drag]:bg-white/50 [&_.ant-upload-drag-container]:flex [&_.ant-upload-drag-container]:h-full [&_.ant-upload-drag-container]:flex-col [&_.ant-upload-drag-container]:items-center [&_.ant-upload-drag-container]:justify-center [&_.ant-upload-drag-container]:gap-2.5 [&_.ant-upload-drag-container]:text-[#1f5b83]"
             >
-              <FileText size={34} strokeWidth={1.5} />
-              <p className="!m-0 !text-[15px] !text-[#172b3a]">
-                {resume ? resume.name : 'Drop your resume here'}
-              </p>
-              <p className="!m-0 !text-xs !text-[#756e68]">
-                {resume
-                  ? `${(resume.size / 1024 / 1024).toFixed(2)} MB · PDF ready`
-                  : 'or click to browse your files'}
-              </p>
+              <div className="flex flex-col items-center gap-2.5 text-center">
+                <FileText size={34} strokeWidth={1.5} />
+                <p className="!m-0 !text-[15px] !text-[#172b3a]">
+                  {resume ? resume.name : 'Drop your resume here'}
+                </p>
+                <p className="!m-0 !text-xs !text-[#756e68]">
+                  {resume
+                    ? `${(resume.size / 1024 / 1024).toFixed(2)} MB · PDF ready`
+                    : 'or click to browse your files'}
+                </p>
+              </div>
             </Upload.Dragger>
             {resume && (
               <Button
