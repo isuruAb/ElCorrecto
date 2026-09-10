@@ -1,5 +1,5 @@
 import OpenAI from "openai";
-import { AnalysisResult } from "../types/analysis";
+import { AnalysisLanguage, AnalysisResult } from "../types/analysis";
 
 const client = new OpenAI({
   apiKey: process.env.AZURE_OPENAI_API_KEY,
@@ -9,6 +9,7 @@ const client = new OpenAI({
 export const analyzeResume = async (
   resumeText: string,
   jobDescription: string,
+  language: AnalysisLanguage = "English",
 ): Promise<AnalysisResult> => {
   const response = await client.chat.completions.create({
     model: process.env.AZURE_OPENAI_DEPLOYMENT!,
@@ -36,6 +37,8 @@ export const analyzeResume = async (
 
                 Base your recommendations only on the supplied resume
                 and job description.
+
+                Write all text values in ${language}.
 
                 Return JSON only.
 

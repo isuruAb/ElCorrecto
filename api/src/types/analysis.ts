@@ -6,6 +6,8 @@ export interface AnalysisResult {
   improvements: string[];
 }
 
+export type AnalysisLanguage = "English" | "Spanish";
+
 export interface AnalyzeResumeRequest {
   resumeFile: Buffer;
   fileName: string;
