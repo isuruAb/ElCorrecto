@@ -6,6 +6,7 @@ import { Alert, Button, Card, ConfigProvider, Input, Progress, Upload } from 'an
 import axios from 'axios'
 import { useTranslation } from 'react-i18next'
 import { Header } from '../components/Header'
+import { SUPPORTED_LANGUAGES } from '../constants/language'
 
 type Analysis = {
   matchScore: number
@@ -21,7 +22,7 @@ const line = 'rgba(23, 43, 58, .16)'
 
 const AnalysePage = () => {
   const { isAuthenticated, loginWithRedirect, getAccessTokenSilently } = useAuth0()
-  const { t } = useTranslation()
+  const { t, i18n } = useTranslation()
   const [resume, setResume] = useState<File | null>(null)
   const [jobDescription, setJobDescription] = useState('')
   const [analysis, setAnalysis] = useState<Analysis | null>(null)
@@ -58,6 +59,10 @@ const AnalysePage = () => {
     const formData = new FormData()
     formData.append('resume', resume)
     formData.append('jobDescription', jobDescription)
+    const languageName =
+      SUPPORTED_LANGUAGES.find((language) => language.key === i18n.resolvedLanguage)?.name ??
+      SUPPORTED_LANGUAGES[0].name
+    formData.append('language', languageName)
     try {
       const accessToken = await getAccessTokenSilently()
       const response = await axios.post<Analysis>(functionUrl, formData, {

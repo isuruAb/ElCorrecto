@@ -1,8 +1,10 @@
 import { useAuth0 } from '@auth0/auth0-react'
-import { LogIn, LogOut } from 'lucide-react'
+import { ChevronDown, LogIn, LogOut } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { Select } from 'antd'
 import { ANALYSE_ROUTE, HOME_ROUTE } from '../constants/route'
+import { SUPPORTED_LANGUAGES } from '../constants/language'
 
 const line = 'rgba(23, 43, 58, .16)'
 
@@ -25,18 +27,16 @@ export const Header = () => {
         </p>
       </div>
       <div className="ml-auto flex items-center gap-4 text-xs text-[#172b3a]">
-        <div className="flex items-center gap-1.5 font-mono text-[11px] text-[#1f5b83]">
-          {(['en', 'sp'] as const).map((language) => (
-            <button
-              key={language}
-              type="button"
-              className={language === i18n.resolvedLanguage ? 'underline' : 'opacity-50'}
-              onClick={() => void i18n.changeLanguage(language)}
-            >
-              {language.toUpperCase()}
-            </button>
-          ))}
-        </div>
+        <Select
+          value={i18n.resolvedLanguage}
+          onChange={(language) => void i18n.changeLanguage(language)}
+          variant="borderless"
+          size="small"
+          suffixIcon={<ChevronDown size={12} />}
+          popupMatchSelectWidth={false}
+          className="!font-mono !text-[11px] !text-[#1f5b83]"
+          options={SUPPORTED_LANGUAGES.map(({ key, name }) => ({ value: key, label: name }))}
+        />
         {isAuthenticated ? (
           <button
             type="button"
