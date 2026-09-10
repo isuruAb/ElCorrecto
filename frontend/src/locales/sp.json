@@ -1,0 +1,58 @@
+{
+  "common": {
+    "brand": "EL CORRECTO",
+    "brandTagline": "EL CORRECTO / INTELIGENCIA DE TALENTO"
+  },
+  "header": {
+    "logIn": "Iniciar sesión",
+    "logOut": "Cerrar sesión",
+    "goHome": "Ir al inicio"
+  },
+  "landing": {
+    "kicker": "EL CORRECTO / INTELIGENCIA DE TALENTO",
+    "titleLine1": "Haz que el próximo paso",
+    "titleEmphasis": "sea claro.",
+    "description": "Compara tu currículum con el puesto que quieres y descubre la señal más fuerte, las brechas y el próximo paso a seguir.",
+    "cta": "Abrir comparador",
+    "footerRight": "LABORATORIO DE COINCIDENCIA DE CV"
+  },
+  "notFound": {
+    "kicker": "404 / PÁGINA NO ENCONTRADA",
+    "titleLine1": "No es el paso",
+    "titleEmphasis": "que esperábamos.",
+    "description": "La página que buscas no existe o se ha movido. Volvamos a encaminarte.",
+    "cta": "Volver al inicio"
+  },
+  "analyse": {
+    "kicker": "ANÁLISIS DE CV / 01",
+    "titleLine1": "Encuentra la señal",
+    "titleEmphasis": "dentro de la historia.",
+    "description": "Compara un currículum con el puesto al que aspira. Nuestro análisis destaca la afinidad, las brechas y el próximo paso más sólido.",
+    "workspaceLabel": "Espacio de análisis de currículum",
+    "resumePanelTitle": "CV en PDF",
+    "dropPrompt": "Suelta tu currículum aquí",
+    "dropHint": "o haz clic para explorar tus archivos",
+    "fileReady": "{{size}} MB · PDF listo",
+    "removeFile": "Quitar archivo",
+    "secureNote": "Tu currículum se sube de forma segura solo para este análisis.",
+    "jobPanelTitle": "Descripción del puesto",
+    "jobPlaceholder": "Pega el puesto, los requisitos y cómo se ve el éxito...",
+    "characterCount": "{{count}} caracteres",
+    "analyseButton": "Analizar",
+    "analysingButton": "Analizando",
+    "resultsKicker": "ANÁLISIS COMPLETADO",
+    "resultsTitle": "Lo que destaca",
+    "matchSuffix": "/ 100 coincidencia",
+    "recruiterRead": "Lectura del reclutador",
+    "matchedSkills": "Habilidades coincidentes",
+    "missingSkills": "Habilidades faltantes",
+    "improvements": "Mejoras",
+    "footerRight": "HAZ QUE EL PRÓXIMO PASO SEA CLARO",
+    "errors": {
+      "invalidFile": "Elige un currículum en PDF.",
+      "missingFields": "Añade un currículum en PDF y una descripción del puesto para continuar.",
+      "functionUrlMissing": "La URL de la función de Azure no está configurada.",
+      "generic": "El análisis falló. Inténtalo de nuevo."
+    }
+  }
+}

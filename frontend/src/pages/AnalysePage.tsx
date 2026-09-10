@@ -4,6 +4,7 @@ import { useAuth0 } from '@auth0/auth0-react'
 import { ArrowRight, Check, FileText, X } from 'lucide-react'
 import { Alert, Button, Card, ConfigProvider, Input, Progress, Upload } from 'antd'
 import axios from 'axios'
+import { useTranslation } from 'react-i18next'
 import { Header } from '../components/Header'
 
 type Analysis = {
@@ -19,7 +20,8 @@ const blue = '#1f5b83'
 const line = 'rgba(23, 43, 58, .16)'
 
 const AnalysePage = () => {
-  const { isAuthenticated, loginWithRedirect } = useAuth0()
+  const { isAuthenticated, loginWithRedirect, getAccessTokenSilently } = useAuth0()
+  const { t } = useTranslation()
   const [resume, setResume] = useState<File | null>(null)
   const [jobDescription, setJobDescription] = useState('')
   const [analysis, setAnalysis] = useState<Analysis | null>(null)
@@ -31,7 +33,7 @@ const AnalysePage = () => {
     setAnalysis(null)
     if (!file) return
     if (file.type !== 'application/pdf' && !file.name.toLowerCase().endsWith('.pdf')) {
-      setError('Please choose a PDF resume.')
+      setError(t('analyse.errors.invalidFile'))
       return
     }
     setResume(file)
@@ -39,7 +41,7 @@ const AnalysePage = () => {
 
   const analyze = async () => {
     if (!resume || !jobDescription.trim()) {
-      setError('Add a PDF resume and a job description to continue.')
+      setError(t('analyse.errors.missingFields'))
       return
     }
     if (!isAuthenticated) {
@@ -47,7 +49,7 @@ const AnalysePage = () => {
       return
     }
     if (!functionUrl) {
-      setError('The Azure Function URL is not configured.')
+      setError(t('analyse.errors.functionUrlMissing'))
       return
     }
     setError('')
@@ -57,7 +59,10 @@ const AnalysePage = () => {
     formData.append('resume', resume)
     formData.append('jobDescription', jobDescription)
     try {
-      const response = await axios.post<Analysis>(functionUrl, formData)
+      const accessToken = await getAccessTokenSilently()
+      const response = await axios.post<Analysis>(functionUrl, formData, {
+        headers: { Authorization: `Bearer ${accessToken}` },
+      })
       setAnalysis(response.data)
     } catch (requestError) {
       const message = axios.isAxiosError(requestError)
@@ -65,9 +70,7 @@ const AnalysePage = () => {
         : undefined
       setError(
         message ??
-          (requestError instanceof Error
-            ? requestError.message
-            : 'Analysis failed. Please try again.'),
+          (requestError instanceof Error ? requestError.message : t('analyse.errors.generic')),
       )
     } finally {
       setIsLoading(false)
@@ -84,27 +87,26 @@ const AnalysePage = () => {
         <Header />
         <section className="max-w-[620px] pb-[62px] pt-[clamp(58px,9vw,112px)]">
           <p className="m-0 font-mono text-[11px] font-medium tracking-[1.2px] text-[#756e68]">
-            CV ANALYSIS / 01
+            {t('analyse.kicker')}
           </p>
           <h2 className="m-[13px_0_18px] font-serif text-[clamp(42px,6vw,74px)] font-semibold leading-[.98] tracking-[-1px] text-[#172b3a]">
-            Find the signal
+            {t('analyse.titleLine1')}
             <br />
-            <em className="text-[#1f5b83]">inside the story.</em>
+            <em className="text-[#1f5b83]">{t('analyse.titleEmphasis')}</em>
           </h2>
           <p className="max-w-[420px] text-base leading-[1.65] text-[#756e68]">
-            Pair a resume with the role it is reaching for. Our analysis highlights fit, gaps, and
-            the next strongest move.
+            {t('analyse.description')}
           </p>
         </section>
         <section
           className="grid grid-cols-1 gap-[18px] pb-[30px] min-[851px]:grid-cols-2 min-[851px]:gap-x-7"
-          aria-label="Resume analysis workspace"
+          aria-label={t('analyse.workspaceLabel')}
         >
           <div
             className="row-span-2 flex h-full min-h-0 flex-col border bg-white/60 p-[27px]"
             style={{ borderColor: line }}
           >
-            <PanelHeading number="01" title="Resume PDF" />
+            <PanelHeading number="01" title={t('analyse.resumePanelTitle')} />
             <Upload.Dragger
               accept=".pdf,application/pdf"
               maxCount={1}
@@ -120,12 +122,12 @@ const AnalysePage = () => {
               <div className="flex flex-col items-center gap-2.5 text-center">
                 <FileText size={34} strokeWidth={1.5} />
                 <p className="!m-0 !text-[15px] !text-[#172b3a]">
-                  {resume ? resume.name : 'Drop your resume here'}
+                  {resume ? resume.name : t('analyse.dropPrompt')}
                 </p>
                 <p className="!m-0 !text-xs !text-[#756e68]">
                   {resume
-                    ? `${(resume.size / 1024 / 1024).toFixed(2)} MB · PDF ready`
-                    : 'or click to browse your files'}
+                    ? t('analyse.fileReady', { size: (resume.size / 1024 / 1024).toFixed(2) })
+                    : t('analyse.dropHint')}
                 </p>
               </div>
             </Upload.Dragger>
@@ -136,15 +138,13 @@ const AnalysePage = () => {
                 icon={<X size={14} />}
                 onClick={() => setResume(null)}
               >
-                Remove file
+                {t('analyse.removeFile')}
               </Button>
             )}
-            <p className="mt-[18px] text-xs text-[#756e68]">
-              Your resume is uploaded securely for this analysis only.
-            </p>
+            <p className="mt-[18px] text-xs text-[#756e68]">{t('analyse.secureNote')}</p>
           </div>
           <div className="border bg-white/60 p-[27px]" style={{ borderColor: line }}>
-            <PanelHeading number="02" title="Job description" />
+            <PanelHeading number="02" title={t('analyse.jobPanelTitle')} />
             <Input.TextArea
               className="!min-h-[244px] !rounded-none !border-[#9db6c5] !p-4 !text-[15px] !leading-[1.6] !text-[#172b3a]"
               value={jobDescription}
@@ -152,11 +152,11 @@ const AnalysePage = () => {
                 setJobDescription(event.target.value)
                 setError('')
               }}
-              placeholder="Paste the role, requirements, and what success looks like..."
+              placeholder={t('analyse.jobPlaceholder')}
               autoSize={{ minRows: 8, maxRows: 14 }}
             />
             <div className="mt-2 text-right text-xs text-[#756e68]">
-              {jobDescription.length} characters
+              {t('analyse.characterCount', { count: jobDescription.length })}
             </div>
           </div>
           <div className="flex min-h-[62px] items-center justify-end gap-5">
@@ -168,7 +168,7 @@ const AnalysePage = () => {
               loading={isLoading}
               icon={!isLoading && <ArrowRight size={18} />}
             >
-              {isLoading ? 'Analysing' : 'Analyse'}
+              {isLoading ? t('analyse.analysingButton') : t('analyse.analyseButton')}
             </Button>
           </div>
         </section>
@@ -189,10 +189,10 @@ const AnalysePage = () => {
             <div className="mb-[27px] flex items-end justify-between">
               <div>
                 <p className="font-mono text-[11px] font-medium tracking-[1.2px] text-[#756e68]">
-                  ANALYSIS COMPLETE
+                  {t('analyse.resultsKicker')}
                 </p>
                 <h2 className="m-[13px_0_0] font-serif text-[clamp(34px,5vw,54px)] font-semibold leading-none text-[#172b3a]">
-                  What stands out
+                  {t('analyse.resultsTitle')}
                 </h2>
               </div>
               <div className="flex items-center gap-2 text-[#756e68]">
@@ -203,7 +203,7 @@ const AnalysePage = () => {
                   strokeColor={blue}
                   format={() => analysis.matchScore}
                 />
-                <span className="font-mono text-[11px]">/ 100 match</span>
+                <span className="font-mono text-[11px]">{t('analyse.matchSuffix')}</span>
               </div>
             </div>
             <div className="grid grid-cols-1 gap-3 md:grid-cols-2 xl:grid-cols-4">
@@ -212,24 +212,24 @@ const AnalysePage = () => {
                 bordered={false}
               >
                 <p className="font-mono text-[11px] font-medium uppercase tracking-[1.2px] text-[#756e68]">
-                  Recruiter read
+                  {t('analyse.recruiterRead')}
                 </p>
                 <p className="mt-[18px] leading-[1.55] text-[#172b3a]">{analysis.summary}</p>
               </Card>
               <ResultList
-                title="Matched skills"
+                title={t('analyse.matchedSkills')}
                 items={analysis.matchedSkills}
                 icon={<Check size={15} />}
                 tone="positive"
               />
               <ResultList
-                title="Missing skills"
+                title={t('analyse.missingSkills')}
                 items={analysis.missingSkills}
                 icon={<X size={15} />}
                 tone="negative"
               />
               <ResultList
-                title="Improvements"
+                title={t('analyse.improvements')}
                 items={analysis.improvements}
                 icon={<ArrowRight size={15} />}
                 tone="neutral"
@@ -241,8 +241,8 @@ const AnalysePage = () => {
           className="flex justify-between border-t py-5 pb-7 font-mono text-[10px] tracking-[1px] text-[#756e68]"
           style={{ borderColor: line }}
         >
-          <span>EL CORRECTO</span>
-          <span>MAKE THE NEXT MOVE CLEAR</span>
+          <span>{t('common.brand')}</span>
+          <span>{t('analyse.footerRight')}</span>
         </footer>
       </main>
     </ConfigProvider>

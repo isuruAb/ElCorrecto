@@ -1,0 +1,58 @@
+{
+  "common": {
+    "brand": "EL CORRECTO",
+    "brandTagline": "EL CORRECTO / TALENT INTELLIGENCE"
+  },
+  "header": {
+    "logIn": "Log in",
+    "logOut": "Log out",
+    "goHome": "Go to home"
+  },
+  "landing": {
+    "kicker": "EL CORRECTO / TALENT INTELLIGENCE",
+    "titleLine1": "Make the next move",
+    "titleEmphasis": "clear.",
+    "description": "Compare your resume with the role you want and see the strongest signal, the gaps, and the next move to make.",
+    "cta": "Open matcher",
+    "footerRight": "RESUME MATCH LAB"
+  },
+  "notFound": {
+    "kicker": "404 / PAGE NOT FOUND",
+    "titleLine1": "Not the move",
+    "titleEmphasis": "we expected.",
+    "description": "The page you're looking for doesn't exist or has moved. Let's get you back on track.",
+    "cta": "Back to home"
+  },
+  "analyse": {
+    "kicker": "CV ANALYSIS / 01",
+    "titleLine1": "Find the signal",
+    "titleEmphasis": "inside the story.",
+    "description": "Pair a resume with the role it is reaching for. Our analysis highlights fit, gaps, and the next strongest move.",
+    "workspaceLabel": "Resume analysis workspace",
+    "resumePanelTitle": "Resume PDF",
+    "dropPrompt": "Drop your resume here",
+    "dropHint": "or click to browse your files",
+    "fileReady": "{{size}} MB · PDF ready",
+    "removeFile": "Remove file",
+    "secureNote": "Your resume is uploaded securely for this analysis only.",
+    "jobPanelTitle": "Job description",
+    "jobPlaceholder": "Paste the role, requirements, and what success looks like...",
+    "characterCount": "{{count}} characters",
+    "analyseButton": "Analyse",
+    "analysingButton": "Analysing",
+    "resultsKicker": "ANALYSIS COMPLETE",
+    "resultsTitle": "What stands out",
+    "matchSuffix": "/ 100 match",
+    "recruiterRead": "Recruiter read",
+    "matchedSkills": "Matched skills",
+    "missingSkills": "Missing skills",
+    "improvements": "Improvements",
+    "footerRight": "MAKE THE NEXT MOVE CLEAR",
+    "errors": {
+      "invalidFile": "Please choose a PDF resume.",
+      "missingFields": "Add a PDF resume and a job description to continue.",
+      "functionUrlMissing": "The Azure Function URL is not configured.",
+      "generic": "Analysis failed. Please try again."
+    }
+  }
+}
