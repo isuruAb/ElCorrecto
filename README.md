@@ -106,6 +106,10 @@ Format the frontend with Prettier:
 npm --prefix frontend run format
 ```
 
+## TODO
+
+- Replace browser-based Auth0 token persistence with a server-side authentication flow using an HttpOnly session cookie.
+
 ## API request
 
 The API expects a `POST` request with `multipart/form-data`:
