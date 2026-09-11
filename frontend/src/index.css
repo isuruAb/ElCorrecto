@@ -1,6 +1,10 @@
 @import 'tailwindcss';
 
 :root {
+  /* brand mark colors - fixed, do not flip with theme */
+  --brand-navy: #172b3a;
+  --brand-cream: #f7f3ec;
+
   --navy: #172b3a;
   --ink: #253541;
   --blue: #1f5b83;
@@ -13,6 +17,8 @@
   --sky: #c9dce7;
   --positive: #6eaa7c;
   --steel: #527a95;
+  --surface: rgba(255, 255, 255, 0.6);
+  --surface-soft: rgba(255, 255, 255, 0.5);
 
   font-family: 'DM Sans', sans-serif;
   color: var(--ink);
@@ -20,6 +26,24 @@
   font-synthesis: none;
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
+}
+
+:root[data-theme='dark'] {
+  color-scheme: dark;
+  --navy: #f4efe7;
+  --ink: #dce3e8;
+  --blue: #4fa3d8;
+  --muted: #93a0a8;
+  --border: #3a4a58;
+  --line: rgba(255, 255, 255, 0.14);
+  --cream-light: #141a21;
+  --cream: #10151b;
+  --cream-dark: #0b0f14;
+  --sky: #24425a;
+  --positive: #7cc492;
+  --steel: #7fa8c4;
+  --surface: rgba(255, 255, 255, 0.06);
+  --surface-soft: rgba(255, 255, 255, 0.04);
 }
 
 * {

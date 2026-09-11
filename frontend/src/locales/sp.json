@@ -6,7 +6,9 @@
   "header": {
     "logIn": "Iniciar sesión",
     "logOut": "Cerrar sesión",
-    "goHome": "Ir al inicio"
+    "goHome": "Ir al inicio",
+    "switchToDark": "Cambiar a tema oscuro",
+    "switchToLight": "Cambiar a tema claro"
   },
   "landing": {
     "kicker": "EL CORRECTO / INTELIGENCIA DE TALENTO",

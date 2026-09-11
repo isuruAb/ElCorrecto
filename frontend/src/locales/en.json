@@ -6,7 +6,9 @@
   "header": {
     "logIn": "Log in",
     "logOut": "Log out",
-    "goHome": "Go to home"
+    "goHome": "Go to home",
+    "switchToDark": "Switch to dark theme",
+    "switchToLight": "Switch to light theme"
   },
   "landing": {
     "kicker": "EL CORRECTO / TALENT INTELLIGENCE",
