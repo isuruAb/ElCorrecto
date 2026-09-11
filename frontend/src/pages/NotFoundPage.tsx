@@ -2,7 +2,7 @@ import { ArrowRight } from 'lucide-react'
 import { Button } from 'antd'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Header } from '../components/Header'
+import { Layout } from '../components/Layout'
 import { HOME_ROUTE } from '../constants/route'
 
 const NotFoundPage = () => {
@@ -10,8 +10,7 @@ const NotFoundPage = () => {
   const { t } = useTranslation()
 
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_90%_4%,var(--sky)_0,transparent_24%),linear-gradient(135deg,var(--cream-light)_0%,var(--cream)_58%,var(--cream-dark)_100%)] px-[clamp(22px,6vw,92px)] text-(--ink)">
-      <Header />
+    <Layout>
       <section className="max-w-[760px] pb-[90px] pt-[clamp(80px,14vw,170px)]">
         <p className="m-0 font-mono text-[11px] font-medium tracking-[1.2px] text-(--muted)">
           {t('notFound.kicker')}
@@ -33,7 +32,7 @@ const NotFoundPage = () => {
           {t('notFound.cta')}
         </Button>
       </section>
-    </main>
+    </Layout>
   )
 }
 

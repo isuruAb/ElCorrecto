@@ -1,11 +1,12 @@
 import { useState } from 'react'
-import type { ReactNode } from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
 import { ArrowRight, Check, FileText, X } from 'lucide-react'
 import { Alert, Button, Card, Input, Progress, Upload } from 'antd'
 import axios from 'axios'
 import { useTranslation } from 'react-i18next'
-import { Header } from '../components/Header'
+import { Layout } from '../components/Layout'
+import { PanelHeading } from '../components/PanelHeading'
+import { ResultList } from '../components/ResultList'
 import { SUPPORTED_LANGUAGES } from '../constants/language'
 
 type Analysis = {
@@ -85,8 +86,7 @@ const AnalysePage = () => {
   }
 
   return (
-    <main className="min-h-screen bg-[radial-gradient(circle_at_90%_4%,var(--sky)_0,transparent_24%),linear-gradient(135deg,var(--cream-light)_0%,var(--cream)_58%,var(--cream-dark)_100%)] px-[clamp(22px,6vw,92px)] text-(--ink)">
-      <Header />
+    <Layout footerRight={t('analyse.footerRight')}>
       <section className="max-w-[620px] pb-[62px] pt-[clamp(58px,9vw,112px)]">
         <p className="m-0 font-mono text-[11px] font-medium tracking-[1.2px] text-(--muted)">
           {t('analyse.kicker')}
@@ -239,59 +239,7 @@ const AnalysePage = () => {
           </div>
         </section>
       )}
-      <footer
-        className="flex justify-between border-t py-5 pb-7 font-mono text-[10px] tracking-[1px] text-(--muted)"
-        style={{ borderColor: line }}
-      >
-        <span>{t('common.brand')}</span>
-        <span>{t('analyse.footerRight')}</span>
-      </footer>
-    </main>
-  )
-}
-
-const PanelHeading = ({ number, title }: { number: string; title: string }) => {
-  return (
-    <div className="mb-7 flex items-center gap-[11px]">
-      <span className="font-mono text-xs font-medium text-(--blue)">{number}</span>
-      <h3 className="m-0 text-lg font-semibold text-(--navy)">{title}</h3>
-    </div>
-  )
-}
-
-const ResultList = ({
-  title,
-  items,
-  icon,
-  tone,
-}: {
-  title: string
-  items: string[]
-  icon: ReactNode
-  tone: string
-}) => {
-  const toneClass =
-    tone === 'positive'
-      ? 'border-t-(--positive)'
-      : tone === 'negative'
-        ? 'border-t-(--blue)'
-        : 'border-t-(--steel)'
-  return (
-    <article
-      className={`min-h-[155px] border border-(--navy)/15 border-t-[3px] bg-(--surface) p-[22px] ${toneClass}`}
-    >
-      <p className="font-mono text-[11px] font-medium uppercase tracking-[1.2px] text-(--muted)">
-        {title}
-      </p>
-      <ul className="mt-[18px] grid gap-2.5 p-0 text-[13px] leading-[1.35] text-(--navy)">
-        {items.map((item, index) => (
-          <li className="flex items-start gap-2" key={`${item}-${index}`}>
-            {icon}
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
-    </article>
+    </Layout>
   )
 }
 

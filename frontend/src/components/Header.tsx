@@ -3,7 +3,7 @@ import { ChevronDown, LogIn, LogOut, Moon, Sun } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
 import { Select } from 'antd'
-import { ANALYSE_ROUTE, HOME_ROUTE } from '../constants/route'
+import { ANALYSE_ROUTE, HOME_ROUTE, JOBS_ROUTE } from '../constants/route'
 import { SUPPORTED_LANGUAGES } from '../constants/language'
 import { THEMES } from '../constants/theme'
 import { useTheme } from '../hooks/useTheme'
@@ -31,6 +31,12 @@ export const Header = () => {
         </p>
       </div>
       <div className="ml-auto flex items-center gap-4 text-xs text-(--navy)">
+        <Link
+          to={JOBS_ROUTE}
+          className="font-mono text-[11px] text-(--blue) no-underline"
+        >
+          {t('header.jobs')}
+        </Link>
         <Select
           value={i18n.resolvedLanguage}
           onChange={(language) => void i18n.changeLanguage(language)}

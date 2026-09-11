@@ -1,9 +1,10 @@
 import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { ConfigProvider, theme as antdTheme } from 'antd'
 import RequireAuthentication from './components/RequireAuthentication'
-import { ANALYSE_ROUTE, HOME_ROUTE } from './constants/route'
+import { ANALYSE_ROUTE, HOME_ROUTE, JOBS_ROUTE } from './constants/route'
 import { THEMES } from './constants/theme'
 import AnalysePage from './pages/AnalysePage'
+import JobsPage from './pages/JobsPage'
 import LandingPage from './pages/LandingPage'
 import NotFoundPage from './pages/NotFoundPage'
 import { useTheme } from './hooks/useTheme'
@@ -21,6 +22,7 @@ const App = () => {
       <BrowserRouter>
         <Routes>
           <Route path={HOME_ROUTE} element={<LandingPage />} />
+          <Route path={JOBS_ROUTE} element={<JobsPage />} />
           <Route
             path={ANALYSE_ROUTE}
             element={
