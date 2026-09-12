@@ -7,6 +7,7 @@
     "logIn": "Iniciar sesión",
     "logOut": "Cerrar sesión",
     "goHome": "Ir al inicio",
+    "analyse": "Analizar",
     "jobs": "Empleos",
     "switchToDark": "Cambiar a tema oscuro",
     "switchToLight": "Cambiar a tema claro"
@@ -62,7 +63,17 @@
     "kicker": "EMPLEOS",
     "titleLine1": "Puestos que valen",
     "titleEmphasis": "tu próximo paso.",
-    "description": "Una lista seleccionada de puestos abiertos está en camino. Vuelve pronto.",
-    "footerRight": "PUESTOS ABIERTOS"
+    "description": "Explora los puestos abiertos y haz clic en uno para leer la descripción completa.",
+    "footerRight": "PUESTOS ABIERTOS",
+    "workspaceLabel": "Espacio de empleos",
+    "listPanelTitle": "Puestos abiertos",
+    "detailPanelTitle": "Descripción",
+    "techStackTitle": "Stack técnico requerido",
+    "loading": "Cargando puestos...",
+    "loadingMore": "Cargando más puestos...",
+    "selectPrompt": "Selecciona un puesto para ver su descripción.",
+    "errors": {
+      "generic": "No se pudieron cargar los empleos. Inténtalo de nuevo."
+    }
   }
 }

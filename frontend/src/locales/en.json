@@ -7,6 +7,7 @@
     "logIn": "Log in",
     "logOut": "Log out",
     "goHome": "Go to home",
+    "analyse": "Analyse",
     "jobs": "Jobs",
     "switchToDark": "Switch to dark theme",
     "switchToLight": "Switch to light theme"
@@ -62,7 +63,17 @@
     "kicker": "JOBS",
     "titleLine1": "Roles worth",
     "titleEmphasis": "your move.",
-    "description": "A curated list of open roles is on its way. Check back soon.",
-    "footerRight": "OPEN ROLES"
+    "description": "Browse open roles and click one to read the full description.",
+    "footerRight": "OPEN ROLES",
+    "workspaceLabel": "Jobs workspace",
+    "listPanelTitle": "Open roles",
+    "detailPanelTitle": "Description",
+    "techStackTitle": "Tech stack required",
+    "loading": "Loading roles...",
+    "loadingMore": "Loading more roles...",
+    "selectPrompt": "Select a role to see its description.",
+    "errors": {
+      "generic": "Couldn't load jobs. Please try again."
+    }
   }
 }

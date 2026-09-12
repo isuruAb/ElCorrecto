@@ -7,6 +7,7 @@ import { ANALYSE_ROUTE, HOME_ROUTE, JOBS_ROUTE } from '../constants/route'
 import { SUPPORTED_LANGUAGES } from '../constants/language'
 import { THEMES } from '../constants/theme'
 import { useTheme } from '../hooks/useTheme'
+import { HeaderNavLink } from './HeaderNavLink'
 
 export const Header = () => {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0()
@@ -31,12 +32,10 @@ export const Header = () => {
         </p>
       </div>
       <div className="ml-auto flex items-center gap-4 text-xs text-(--navy)">
-        <Link
-          to={JOBS_ROUTE}
-          className="font-mono text-[11px] text-(--blue) no-underline"
-        >
-          {t('header.jobs')}
-        </Link>
+        {isAuthenticated && (
+          <HeaderNavLink to={ANALYSE_ROUTE}>{t('header.analyse')}</HeaderNavLink>
+        )}
+        <HeaderNavLink to={JOBS_ROUTE}>{t('header.jobs')}</HeaderNavLink>
         <Select
           value={i18n.resolvedLanguage}
           onChange={(language) => void i18n.changeLanguage(language)}
