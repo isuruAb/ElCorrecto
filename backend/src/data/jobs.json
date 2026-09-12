@@ -1,0 +1,1402 @@
+[
+  {
+    "id": "job-1",
+    "title": "Frontend Engineer",
+    "company": "BluePeak Labs",
+    "country": "United Kingdom",
+    "employmentType": "Part-time",
+    "description": "BluePeak Labs is hiring a Frontend Engineer to join our team in United Kingdom. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at BluePeak Labs.",
+    "techStack": [
+      "TypeScript",
+      "React",
+      "CSS",
+      "Vite"
+    ]
+  },
+  {
+    "id": "job-2",
+    "title": "Backend Engineer",
+    "company": "Cedarline Technologies",
+    "country": "Spain",
+    "employmentType": "Full-time",
+    "description": "Cedarline Technologies is hiring a Backend Engineer to join our team in Spain. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Cedarline Technologies.",
+    "techStack": [
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Docker"
+    ]
+  },
+  {
+    "id": "job-3",
+    "title": "Full Stack Developer",
+    "company": "Vantage Cloud",
+    "country": "Switzerland",
+    "employmentType": "Full-time",
+    "description": "Vantage Cloud is hiring a Full Stack Developer to join our team in Switzerland. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Vantage Cloud.",
+    "techStack": [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "id": "job-4",
+    "title": "Product Manager",
+    "company": "Coldwater Studio",
+    "country": "Canada",
+    "employmentType": "Full-time",
+    "description": "Coldwater Studio is hiring a Product Manager to join our team in Canada. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Coldwater Studio.",
+    "techStack": [
+      "Jira",
+      "Figma",
+      "SQL",
+      "Amplitude"
+    ]
+  },
+  {
+    "id": "job-5",
+    "title": "Data Scientist",
+    "company": "Bright Harbor Media",
+    "country": "France",
+    "employmentType": "Full-time",
+    "description": "Bright Harbor Media is hiring a Data Scientist to join our team in France. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Bright Harbor Media.",
+    "techStack": [
+      "Python",
+      "Pandas",
+      "scikit-learn",
+      "SQL"
+    ]
+  },
+  {
+    "id": "job-6",
+    "title": "DevOps Engineer",
+    "company": "Pinecrest AI",
+    "country": "Poland",
+    "employmentType": "Part-time",
+    "description": "Pinecrest AI is hiring a DevOps Engineer to join our team in Poland. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Pinecrest AI.",
+    "techStack": [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "AWS"
+    ]
+  },
+  {
+    "id": "job-7",
+    "title": "UX Designer",
+    "company": "Greenfield Energy",
+    "country": "Germany",
+    "employmentType": "Full-time",
+    "description": "Greenfield Energy is hiring a UX Designer to join our team in Germany. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Greenfield Energy.",
+    "techStack": [
+      "Figma",
+      "Sketch",
+      "Adobe XD",
+      "Zeplin"
+    ]
+  },
+  {
+    "id": "job-8",
+    "title": "QA Engineer",
+    "company": "Lattice Works",
+    "country": "India",
+    "employmentType": "Full-time",
+    "description": "Lattice Works is hiring a QA Engineer to join our team in India. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Lattice Works.",
+    "techStack": [
+      "Cypress",
+      "Playwright",
+      "Jest",
+      "Postman"
+    ]
+  },
+  {
+    "id": "job-9",
+    "title": "Mobile Engineer (iOS)",
+    "company": "Fieldstone Software",
+    "country": "South Africa",
+    "employmentType": "Full-time",
+    "description": "Fieldstone Software is hiring a Mobile Engineer (iOS) to join our team in South Africa. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Fieldstone Software.",
+    "techStack": [
+      "Swift",
+      "SwiftUI",
+      "Xcode",
+      "Combine"
+    ]
+  },
+  {
+    "id": "job-10",
+    "title": "Mobile Engineer (Android)",
+    "company": "Silverton Robotics",
+    "country": "Ireland",
+    "employmentType": "Full-time",
+    "description": "Silverton Robotics is hiring a Mobile Engineer (Android) to join our team in Ireland. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Silverton Robotics.",
+    "techStack": [
+      "Kotlin",
+      "Jetpack Compose",
+      "Android Studio",
+      "Coroutines"
+    ]
+  },
+  {
+    "id": "job-11",
+    "title": "Site Reliability Engineer",
+    "company": "Ashgrove Health Tech",
+    "country": "Japan",
+    "employmentType": "Part-time",
+    "description": "Ashgrove Health Tech is hiring a Site Reliability Engineer to join our team in Japan. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Ashgrove Health Tech.",
+    "techStack": [
+      "Kubernetes",
+      "Prometheus",
+      "Terraform",
+      "Go"
+    ]
+  },
+  {
+    "id": "job-12",
+    "title": "Machine Learning Engineer",
+    "company": "Wells & Fenn",
+    "country": "United Arab Emirates",
+    "employmentType": "Full-time",
+    "description": "Wells & Fenn is hiring a Machine Learning Engineer to join our team in United Arab Emirates. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Wells & Fenn.",
+    "techStack": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "MLflow"
+    ]
+  },
+  {
+    "id": "job-13",
+    "title": "Data Analyst",
+    "company": "Redshift Logistics",
+    "country": "Singapore",
+    "employmentType": "Full-time",
+    "description": "Redshift Logistics is hiring a Data Analyst to join our team in Singapore. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Redshift Logistics.",
+    "techStack": [
+      "SQL",
+      "Python",
+      "Tableau",
+      "Excel"
+    ]
+  },
+  {
+    "id": "job-14",
+    "title": "Technical Writer",
+    "company": "Nova Systems",
+    "country": "Brazil",
+    "employmentType": "Full-time",
+    "description": "Nova Systems is hiring a Technical Writer to join our team in Brazil. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Nova Systems.",
+    "techStack": [
+      "Markdown",
+      "Git",
+      "Confluence",
+      "Docusaurus"
+    ]
+  },
+  {
+    "id": "job-15",
+    "title": "Solutions Architect",
+    "company": "Harbor Digital",
+    "country": "Australia",
+    "employmentType": "Full-time",
+    "description": "Harbor Digital is hiring a Solutions Architect to join our team in Australia. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Harbor Digital.",
+    "techStack": [
+      "AWS",
+      "Terraform",
+      "Kubernetes",
+      "Node.js"
+    ]
+  },
+  {
+    "id": "job-16",
+    "title": "Engineering Manager",
+    "company": "Northbridge Analytics",
+    "country": "New Zealand",
+    "employmentType": "Part-time",
+    "description": "Northbridge Analytics is hiring a Engineering Manager to join our team in New Zealand. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Northbridge Analytics.",
+    "techStack": [
+      "Jira",
+      "Git",
+      "TypeScript",
+      "AWS"
+    ]
+  },
+  {
+    "id": "job-17",
+    "title": "Customer Success Manager",
+    "company": "Meridian Data",
+    "country": "Mexico",
+    "employmentType": "Full-time",
+    "description": "Meridian Data is hiring a Customer Success Manager to join our team in Mexico. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Meridian Data.",
+    "techStack": [
+      "Salesforce",
+      "Zendesk",
+      "HubSpot",
+      "SQL"
+    ]
+  },
+  {
+    "id": "job-18",
+    "title": "Sales Engineer",
+    "company": "Ironpeak Security",
+    "country": "United States",
+    "employmentType": "Full-time",
+    "description": "Ironpeak Security is hiring a Sales Engineer to join our team in United States. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Ironpeak Security.",
+    "techStack": [
+      "Salesforce",
+      "REST APIs",
+      "SQL",
+      "Postman"
+    ]
+  },
+  {
+    "id": "job-19",
+    "title": "Security Engineer",
+    "company": "Origami Finance",
+    "country": "Netherlands",
+    "employmentType": "Full-time",
+    "description": "Origami Finance is hiring a Security Engineer to join our team in Netherlands. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Origami Finance.",
+    "techStack": [
+      "AWS",
+      "Terraform",
+      "Python",
+      "Splunk"
+    ]
+  },
+  {
+    "id": "job-20",
+    "title": "Business Analyst",
+    "company": "Anchorpoint Retail",
+    "country": "Sweden",
+    "employmentType": "Full-time",
+    "description": "Anchorpoint Retail is hiring a Business Analyst to join our team in Sweden. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Anchorpoint Retail.",
+    "techStack": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Jira"
+    ]
+  },
+  {
+    "id": "job-21",
+    "title": "Frontend Engineer",
+    "company": "BluePeak Labs",
+    "country": "United Kingdom",
+    "employmentType": "Part-time",
+    "description": "BluePeak Labs is hiring a Frontend Engineer to join our team in United Kingdom. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at BluePeak Labs.",
+    "techStack": [
+      "TypeScript",
+      "React",
+      "CSS",
+      "Vite"
+    ]
+  },
+  {
+    "id": "job-22",
+    "title": "Backend Engineer",
+    "company": "Cedarline Technologies",
+    "country": "Spain",
+    "employmentType": "Full-time",
+    "description": "Cedarline Technologies is hiring a Backend Engineer to join our team in Spain. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Cedarline Technologies.",
+    "techStack": [
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Docker"
+    ]
+  },
+  {
+    "id": "job-23",
+    "title": "Full Stack Developer",
+    "company": "Vantage Cloud",
+    "country": "Switzerland",
+    "employmentType": "Full-time",
+    "description": "Vantage Cloud is hiring a Full Stack Developer to join our team in Switzerland. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Vantage Cloud.",
+    "techStack": [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "id": "job-24",
+    "title": "Product Manager",
+    "company": "Coldwater Studio",
+    "country": "Canada",
+    "employmentType": "Full-time",
+    "description": "Coldwater Studio is hiring a Product Manager to join our team in Canada. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Coldwater Studio.",
+    "techStack": [
+      "Jira",
+      "Figma",
+      "SQL",
+      "Amplitude"
+    ]
+  },
+  {
+    "id": "job-25",
+    "title": "Data Scientist",
+    "company": "Bright Harbor Media",
+    "country": "France",
+    "employmentType": "Full-time",
+    "description": "Bright Harbor Media is hiring a Data Scientist to join our team in France. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Bright Harbor Media.",
+    "techStack": [
+      "Python",
+      "Pandas",
+      "scikit-learn",
+      "SQL"
+    ]
+  },
+  {
+    "id": "job-26",
+    "title": "DevOps Engineer",
+    "company": "Pinecrest AI",
+    "country": "Poland",
+    "employmentType": "Part-time",
+    "description": "Pinecrest AI is hiring a DevOps Engineer to join our team in Poland. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Pinecrest AI.",
+    "techStack": [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "AWS"
+    ]
+  },
+  {
+    "id": "job-27",
+    "title": "UX Designer",
+    "company": "Greenfield Energy",
+    "country": "Germany",
+    "employmentType": "Full-time",
+    "description": "Greenfield Energy is hiring a UX Designer to join our team in Germany. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Greenfield Energy.",
+    "techStack": [
+      "Figma",
+      "Sketch",
+      "Adobe XD",
+      "Zeplin"
+    ]
+  },
+  {
+    "id": "job-28",
+    "title": "QA Engineer",
+    "company": "Lattice Works",
+    "country": "India",
+    "employmentType": "Full-time",
+    "description": "Lattice Works is hiring a QA Engineer to join our team in India. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Lattice Works.",
+    "techStack": [
+      "Cypress",
+      "Playwright",
+      "Jest",
+      "Postman"
+    ]
+  },
+  {
+    "id": "job-29",
+    "title": "Mobile Engineer (iOS)",
+    "company": "Fieldstone Software",
+    "country": "South Africa",
+    "employmentType": "Full-time",
+    "description": "Fieldstone Software is hiring a Mobile Engineer (iOS) to join our team in South Africa. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Fieldstone Software.",
+    "techStack": [
+      "Swift",
+      "SwiftUI",
+      "Xcode",
+      "Combine"
+    ]
+  },
+  {
+    "id": "job-30",
+    "title": "Mobile Engineer (Android)",
+    "company": "Silverton Robotics",
+    "country": "Ireland",
+    "employmentType": "Full-time",
+    "description": "Silverton Robotics is hiring a Mobile Engineer (Android) to join our team in Ireland. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Silverton Robotics.",
+    "techStack": [
+      "Kotlin",
+      "Jetpack Compose",
+      "Android Studio",
+      "Coroutines"
+    ]
+  },
+  {
+    "id": "job-31",
+    "title": "Site Reliability Engineer",
+    "company": "Ashgrove Health Tech",
+    "country": "Japan",
+    "employmentType": "Part-time",
+    "description": "Ashgrove Health Tech is hiring a Site Reliability Engineer to join our team in Japan. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Ashgrove Health Tech.",
+    "techStack": [
+      "Kubernetes",
+      "Prometheus",
+      "Terraform",
+      "Go"
+    ]
+  },
+  {
+    "id": "job-32",
+    "title": "Machine Learning Engineer",
+    "company": "Wells & Fenn",
+    "country": "United Arab Emirates",
+    "employmentType": "Full-time",
+    "description": "Wells & Fenn is hiring a Machine Learning Engineer to join our team in United Arab Emirates. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Wells & Fenn.",
+    "techStack": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "MLflow"
+    ]
+  },
+  {
+    "id": "job-33",
+    "title": "Data Analyst",
+    "company": "Redshift Logistics",
+    "country": "Singapore",
+    "employmentType": "Full-time",
+    "description": "Redshift Logistics is hiring a Data Analyst to join our team in Singapore. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Redshift Logistics.",
+    "techStack": [
+      "SQL",
+      "Python",
+      "Tableau",
+      "Excel"
+    ]
+  },
+  {
+    "id": "job-34",
+    "title": "Technical Writer",
+    "company": "Nova Systems",
+    "country": "Brazil",
+    "employmentType": "Full-time",
+    "description": "Nova Systems is hiring a Technical Writer to join our team in Brazil. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Nova Systems.",
+    "techStack": [
+      "Markdown",
+      "Git",
+      "Confluence",
+      "Docusaurus"
+    ]
+  },
+  {
+    "id": "job-35",
+    "title": "Solutions Architect",
+    "company": "Harbor Digital",
+    "country": "Australia",
+    "employmentType": "Full-time",
+    "description": "Harbor Digital is hiring a Solutions Architect to join our team in Australia. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Harbor Digital.",
+    "techStack": [
+      "AWS",
+      "Terraform",
+      "Kubernetes",
+      "Node.js"
+    ]
+  },
+  {
+    "id": "job-36",
+    "title": "Engineering Manager",
+    "company": "Northbridge Analytics",
+    "country": "New Zealand",
+    "employmentType": "Part-time",
+    "description": "Northbridge Analytics is hiring a Engineering Manager to join our team in New Zealand. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Northbridge Analytics.",
+    "techStack": [
+      "Jira",
+      "Git",
+      "TypeScript",
+      "AWS"
+    ]
+  },
+  {
+    "id": "job-37",
+    "title": "Customer Success Manager",
+    "company": "Meridian Data",
+    "country": "Mexico",
+    "employmentType": "Full-time",
+    "description": "Meridian Data is hiring a Customer Success Manager to join our team in Mexico. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Meridian Data.",
+    "techStack": [
+      "Salesforce",
+      "Zendesk",
+      "HubSpot",
+      "SQL"
+    ]
+  },
+  {
+    "id": "job-38",
+    "title": "Sales Engineer",
+    "company": "Ironpeak Security",
+    "country": "United States",
+    "employmentType": "Full-time",
+    "description": "Ironpeak Security is hiring a Sales Engineer to join our team in United States. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Ironpeak Security.",
+    "techStack": [
+      "Salesforce",
+      "REST APIs",
+      "SQL",
+      "Postman"
+    ]
+  },
+  {
+    "id": "job-39",
+    "title": "Security Engineer",
+    "company": "Origami Finance",
+    "country": "Netherlands",
+    "employmentType": "Full-time",
+    "description": "Origami Finance is hiring a Security Engineer to join our team in Netherlands. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Origami Finance.",
+    "techStack": [
+      "AWS",
+      "Terraform",
+      "Python",
+      "Splunk"
+    ]
+  },
+  {
+    "id": "job-40",
+    "title": "Business Analyst",
+    "company": "Anchorpoint Retail",
+    "country": "Sweden",
+    "employmentType": "Full-time",
+    "description": "Anchorpoint Retail is hiring a Business Analyst to join our team in Sweden. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Anchorpoint Retail.",
+    "techStack": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Jira"
+    ]
+  },
+  {
+    "id": "job-41",
+    "title": "Frontend Engineer",
+    "company": "BluePeak Labs",
+    "country": "United Kingdom",
+    "employmentType": "Part-time",
+    "description": "BluePeak Labs is hiring a Frontend Engineer to join our team in United Kingdom. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at BluePeak Labs.",
+    "techStack": [
+      "TypeScript",
+      "React",
+      "CSS",
+      "Vite"
+    ]
+  },
+  {
+    "id": "job-42",
+    "title": "Backend Engineer",
+    "company": "Cedarline Technologies",
+    "country": "Spain",
+    "employmentType": "Full-time",
+    "description": "Cedarline Technologies is hiring a Backend Engineer to join our team in Spain. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Cedarline Technologies.",
+    "techStack": [
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Docker"
+    ]
+  },
+  {
+    "id": "job-43",
+    "title": "Full Stack Developer",
+    "company": "Vantage Cloud",
+    "country": "Switzerland",
+    "employmentType": "Full-time",
+    "description": "Vantage Cloud is hiring a Full Stack Developer to join our team in Switzerland. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Vantage Cloud.",
+    "techStack": [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "id": "job-44",
+    "title": "Product Manager",
+    "company": "Coldwater Studio",
+    "country": "Canada",
+    "employmentType": "Full-time",
+    "description": "Coldwater Studio is hiring a Product Manager to join our team in Canada. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Coldwater Studio.",
+    "techStack": [
+      "Jira",
+      "Figma",
+      "SQL",
+      "Amplitude"
+    ]
+  },
+  {
+    "id": "job-45",
+    "title": "Data Scientist",
+    "company": "Bright Harbor Media",
+    "country": "France",
+    "employmentType": "Full-time",
+    "description": "Bright Harbor Media is hiring a Data Scientist to join our team in France. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Bright Harbor Media.",
+    "techStack": [
+      "Python",
+      "Pandas",
+      "scikit-learn",
+      "SQL"
+    ]
+  },
+  {
+    "id": "job-46",
+    "title": "DevOps Engineer",
+    "company": "Pinecrest AI",
+    "country": "Poland",
+    "employmentType": "Part-time",
+    "description": "Pinecrest AI is hiring a DevOps Engineer to join our team in Poland. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Pinecrest AI.",
+    "techStack": [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "AWS"
+    ]
+  },
+  {
+    "id": "job-47",
+    "title": "UX Designer",
+    "company": "Greenfield Energy",
+    "country": "Germany",
+    "employmentType": "Full-time",
+    "description": "Greenfield Energy is hiring a UX Designer to join our team in Germany. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Greenfield Energy.",
+    "techStack": [
+      "Figma",
+      "Sketch",
+      "Adobe XD",
+      "Zeplin"
+    ]
+  },
+  {
+    "id": "job-48",
+    "title": "QA Engineer",
+    "company": "Lattice Works",
+    "country": "India",
+    "employmentType": "Full-time",
+    "description": "Lattice Works is hiring a QA Engineer to join our team in India. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Lattice Works.",
+    "techStack": [
+      "Cypress",
+      "Playwright",
+      "Jest",
+      "Postman"
+    ]
+  },
+  {
+    "id": "job-49",
+    "title": "Mobile Engineer (iOS)",
+    "company": "Fieldstone Software",
+    "country": "South Africa",
+    "employmentType": "Full-time",
+    "description": "Fieldstone Software is hiring a Mobile Engineer (iOS) to join our team in South Africa. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Fieldstone Software.",
+    "techStack": [
+      "Swift",
+      "SwiftUI",
+      "Xcode",
+      "Combine"
+    ]
+  },
+  {
+    "id": "job-50",
+    "title": "Mobile Engineer (Android)",
+    "company": "Silverton Robotics",
+    "country": "Ireland",
+    "employmentType": "Full-time",
+    "description": "Silverton Robotics is hiring a Mobile Engineer (Android) to join our team in Ireland. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Silverton Robotics.",
+    "techStack": [
+      "Kotlin",
+      "Jetpack Compose",
+      "Android Studio",
+      "Coroutines"
+    ]
+  },
+  {
+    "id": "job-51",
+    "title": "Site Reliability Engineer",
+    "company": "Ashgrove Health Tech",
+    "country": "Japan",
+    "employmentType": "Part-time",
+    "description": "Ashgrove Health Tech is hiring a Site Reliability Engineer to join our team in Japan. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Ashgrove Health Tech.",
+    "techStack": [
+      "Kubernetes",
+      "Prometheus",
+      "Terraform",
+      "Go"
+    ]
+  },
+  {
+    "id": "job-52",
+    "title": "Machine Learning Engineer",
+    "company": "Wells & Fenn",
+    "country": "United Arab Emirates",
+    "employmentType": "Full-time",
+    "description": "Wells & Fenn is hiring a Machine Learning Engineer to join our team in United Arab Emirates. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Wells & Fenn.",
+    "techStack": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "MLflow"
+    ]
+  },
+  {
+    "id": "job-53",
+    "title": "Data Analyst",
+    "company": "Redshift Logistics",
+    "country": "Singapore",
+    "employmentType": "Full-time",
+    "description": "Redshift Logistics is hiring a Data Analyst to join our team in Singapore. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Redshift Logistics.",
+    "techStack": [
+      "SQL",
+      "Python",
+      "Tableau",
+      "Excel"
+    ]
+  },
+  {
+    "id": "job-54",
+    "title": "Technical Writer",
+    "company": "Nova Systems",
+    "country": "Brazil",
+    "employmentType": "Full-time",
+    "description": "Nova Systems is hiring a Technical Writer to join our team in Brazil. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Nova Systems.",
+    "techStack": [
+      "Markdown",
+      "Git",
+      "Confluence",
+      "Docusaurus"
+    ]
+  },
+  {
+    "id": "job-55",
+    "title": "Solutions Architect",
+    "company": "Harbor Digital",
+    "country": "Australia",
+    "employmentType": "Full-time",
+    "description": "Harbor Digital is hiring a Solutions Architect to join our team in Australia. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Harbor Digital.",
+    "techStack": [
+      "AWS",
+      "Terraform",
+      "Kubernetes",
+      "Node.js"
+    ]
+  },
+  {
+    "id": "job-56",
+    "title": "Engineering Manager",
+    "company": "Northbridge Analytics",
+    "country": "New Zealand",
+    "employmentType": "Part-time",
+    "description": "Northbridge Analytics is hiring a Engineering Manager to join our team in New Zealand. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Northbridge Analytics.",
+    "techStack": [
+      "Jira",
+      "Git",
+      "TypeScript",
+      "AWS"
+    ]
+  },
+  {
+    "id": "job-57",
+    "title": "Customer Success Manager",
+    "company": "Meridian Data",
+    "country": "Mexico",
+    "employmentType": "Full-time",
+    "description": "Meridian Data is hiring a Customer Success Manager to join our team in Mexico. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Meridian Data.",
+    "techStack": [
+      "Salesforce",
+      "Zendesk",
+      "HubSpot",
+      "SQL"
+    ]
+  },
+  {
+    "id": "job-58",
+    "title": "Sales Engineer",
+    "company": "Ironpeak Security",
+    "country": "United States",
+    "employmentType": "Full-time",
+    "description": "Ironpeak Security is hiring a Sales Engineer to join our team in United States. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Ironpeak Security.",
+    "techStack": [
+      "Salesforce",
+      "REST APIs",
+      "SQL",
+      "Postman"
+    ]
+  },
+  {
+    "id": "job-59",
+    "title": "Security Engineer",
+    "company": "Origami Finance",
+    "country": "Netherlands",
+    "employmentType": "Full-time",
+    "description": "Origami Finance is hiring a Security Engineer to join our team in Netherlands. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Origami Finance.",
+    "techStack": [
+      "AWS",
+      "Terraform",
+      "Python",
+      "Splunk"
+    ]
+  },
+  {
+    "id": "job-60",
+    "title": "Business Analyst",
+    "company": "Anchorpoint Retail",
+    "country": "Sweden",
+    "employmentType": "Full-time",
+    "description": "Anchorpoint Retail is hiring a Business Analyst to join our team in Sweden. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Anchorpoint Retail.",
+    "techStack": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Jira"
+    ]
+  },
+  {
+    "id": "job-61",
+    "title": "Frontend Engineer",
+    "company": "BluePeak Labs",
+    "country": "United Kingdom",
+    "employmentType": "Part-time",
+    "description": "BluePeak Labs is hiring a Frontend Engineer to join our team in United Kingdom. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at BluePeak Labs.",
+    "techStack": [
+      "TypeScript",
+      "React",
+      "CSS",
+      "Vite"
+    ]
+  },
+  {
+    "id": "job-62",
+    "title": "Backend Engineer",
+    "company": "Cedarline Technologies",
+    "country": "Spain",
+    "employmentType": "Full-time",
+    "description": "Cedarline Technologies is hiring a Backend Engineer to join our team in Spain. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Cedarline Technologies.",
+    "techStack": [
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Docker"
+    ]
+  },
+  {
+    "id": "job-63",
+    "title": "Full Stack Developer",
+    "company": "Vantage Cloud",
+    "country": "Switzerland",
+    "employmentType": "Full-time",
+    "description": "Vantage Cloud is hiring a Full Stack Developer to join our team in Switzerland. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Vantage Cloud.",
+    "techStack": [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "id": "job-64",
+    "title": "Product Manager",
+    "company": "Coldwater Studio",
+    "country": "Canada",
+    "employmentType": "Full-time",
+    "description": "Coldwater Studio is hiring a Product Manager to join our team in Canada. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Coldwater Studio.",
+    "techStack": [
+      "Jira",
+      "Figma",
+      "SQL",
+      "Amplitude"
+    ]
+  },
+  {
+    "id": "job-65",
+    "title": "Data Scientist",
+    "company": "Bright Harbor Media",
+    "country": "France",
+    "employmentType": "Full-time",
+    "description": "Bright Harbor Media is hiring a Data Scientist to join our team in France. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Bright Harbor Media.",
+    "techStack": [
+      "Python",
+      "Pandas",
+      "scikit-learn",
+      "SQL"
+    ]
+  },
+  {
+    "id": "job-66",
+    "title": "DevOps Engineer",
+    "company": "Pinecrest AI",
+    "country": "Poland",
+    "employmentType": "Part-time",
+    "description": "Pinecrest AI is hiring a DevOps Engineer to join our team in Poland. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Pinecrest AI.",
+    "techStack": [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "AWS"
+    ]
+  },
+  {
+    "id": "job-67",
+    "title": "UX Designer",
+    "company": "Greenfield Energy",
+    "country": "Germany",
+    "employmentType": "Full-time",
+    "description": "Greenfield Energy is hiring a UX Designer to join our team in Germany. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Greenfield Energy.",
+    "techStack": [
+      "Figma",
+      "Sketch",
+      "Adobe XD",
+      "Zeplin"
+    ]
+  },
+  {
+    "id": "job-68",
+    "title": "QA Engineer",
+    "company": "Lattice Works",
+    "country": "India",
+    "employmentType": "Full-time",
+    "description": "Lattice Works is hiring a QA Engineer to join our team in India. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Lattice Works.",
+    "techStack": [
+      "Cypress",
+      "Playwright",
+      "Jest",
+      "Postman"
+    ]
+  },
+  {
+    "id": "job-69",
+    "title": "Mobile Engineer (iOS)",
+    "company": "Fieldstone Software",
+    "country": "South Africa",
+    "employmentType": "Full-time",
+    "description": "Fieldstone Software is hiring a Mobile Engineer (iOS) to join our team in South Africa. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Fieldstone Software.",
+    "techStack": [
+      "Swift",
+      "SwiftUI",
+      "Xcode",
+      "Combine"
+    ]
+  },
+  {
+    "id": "job-70",
+    "title": "Mobile Engineer (Android)",
+    "company": "Silverton Robotics",
+    "country": "Ireland",
+    "employmentType": "Full-time",
+    "description": "Silverton Robotics is hiring a Mobile Engineer (Android) to join our team in Ireland. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Silverton Robotics.",
+    "techStack": [
+      "Kotlin",
+      "Jetpack Compose",
+      "Android Studio",
+      "Coroutines"
+    ]
+  },
+  {
+    "id": "job-71",
+    "title": "Site Reliability Engineer",
+    "company": "Ashgrove Health Tech",
+    "country": "Japan",
+    "employmentType": "Part-time",
+    "description": "Ashgrove Health Tech is hiring a Site Reliability Engineer to join our team in Japan. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Ashgrove Health Tech.",
+    "techStack": [
+      "Kubernetes",
+      "Prometheus",
+      "Terraform",
+      "Go"
+    ]
+  },
+  {
+    "id": "job-72",
+    "title": "Machine Learning Engineer",
+    "company": "Wells & Fenn",
+    "country": "United Arab Emirates",
+    "employmentType": "Full-time",
+    "description": "Wells & Fenn is hiring a Machine Learning Engineer to join our team in United Arab Emirates. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Wells & Fenn.",
+    "techStack": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "MLflow"
+    ]
+  },
+  {
+    "id": "job-73",
+    "title": "Data Analyst",
+    "company": "Redshift Logistics",
+    "country": "Singapore",
+    "employmentType": "Full-time",
+    "description": "Redshift Logistics is hiring a Data Analyst to join our team in Singapore. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Redshift Logistics.",
+    "techStack": [
+      "SQL",
+      "Python",
+      "Tableau",
+      "Excel"
+    ]
+  },
+  {
+    "id": "job-74",
+    "title": "Technical Writer",
+    "company": "Nova Systems",
+    "country": "Brazil",
+    "employmentType": "Full-time",
+    "description": "Nova Systems is hiring a Technical Writer to join our team in Brazil. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Nova Systems.",
+    "techStack": [
+      "Markdown",
+      "Git",
+      "Confluence",
+      "Docusaurus"
+    ]
+  },
+  {
+    "id": "job-75",
+    "title": "Solutions Architect",
+    "company": "Harbor Digital",
+    "country": "Australia",
+    "employmentType": "Full-time",
+    "description": "Harbor Digital is hiring a Solutions Architect to join our team in Australia. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Harbor Digital.",
+    "techStack": [
+      "AWS",
+      "Terraform",
+      "Kubernetes",
+      "Node.js"
+    ]
+  },
+  {
+    "id": "job-76",
+    "title": "Engineering Manager",
+    "company": "Northbridge Analytics",
+    "country": "New Zealand",
+    "employmentType": "Part-time",
+    "description": "Northbridge Analytics is hiring a Engineering Manager to join our team in New Zealand. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Northbridge Analytics.",
+    "techStack": [
+      "Jira",
+      "Git",
+      "TypeScript",
+      "AWS"
+    ]
+  },
+  {
+    "id": "job-77",
+    "title": "Customer Success Manager",
+    "company": "Meridian Data",
+    "country": "Mexico",
+    "employmentType": "Full-time",
+    "description": "Meridian Data is hiring a Customer Success Manager to join our team in Mexico. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Meridian Data.",
+    "techStack": [
+      "Salesforce",
+      "Zendesk",
+      "HubSpot",
+      "SQL"
+    ]
+  },
+  {
+    "id": "job-78",
+    "title": "Sales Engineer",
+    "company": "Ironpeak Security",
+    "country": "United States",
+    "employmentType": "Full-time",
+    "description": "Ironpeak Security is hiring a Sales Engineer to join our team in United States. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Ironpeak Security.",
+    "techStack": [
+      "Salesforce",
+      "REST APIs",
+      "SQL",
+      "Postman"
+    ]
+  },
+  {
+    "id": "job-79",
+    "title": "Security Engineer",
+    "company": "Origami Finance",
+    "country": "Netherlands",
+    "employmentType": "Full-time",
+    "description": "Origami Finance is hiring a Security Engineer to join our team in Netherlands. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Origami Finance.",
+    "techStack": [
+      "AWS",
+      "Terraform",
+      "Python",
+      "Splunk"
+    ]
+  },
+  {
+    "id": "job-80",
+    "title": "Business Analyst",
+    "company": "Anchorpoint Retail",
+    "country": "Sweden",
+    "employmentType": "Full-time",
+    "description": "Anchorpoint Retail is hiring a Business Analyst to join our team in Sweden. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Anchorpoint Retail.",
+    "techStack": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Jira"
+    ]
+  },
+  {
+    "id": "job-81",
+    "title": "Frontend Engineer",
+    "company": "BluePeak Labs",
+    "country": "United Kingdom",
+    "employmentType": "Part-time",
+    "description": "BluePeak Labs is hiring a Frontend Engineer to join our team in United Kingdom. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at BluePeak Labs.",
+    "techStack": [
+      "TypeScript",
+      "React",
+      "CSS",
+      "Vite"
+    ]
+  },
+  {
+    "id": "job-82",
+    "title": "Backend Engineer",
+    "company": "Cedarline Technologies",
+    "country": "Spain",
+    "employmentType": "Full-time",
+    "description": "Cedarline Technologies is hiring a Backend Engineer to join our team in Spain. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Cedarline Technologies.",
+    "techStack": [
+      "Node.js",
+      "TypeScript",
+      "PostgreSQL",
+      "Docker"
+    ]
+  },
+  {
+    "id": "job-83",
+    "title": "Full Stack Developer",
+    "company": "Vantage Cloud",
+    "country": "Switzerland",
+    "employmentType": "Full-time",
+    "description": "Vantage Cloud is hiring a Full Stack Developer to join our team in Switzerland. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Vantage Cloud.",
+    "techStack": [
+      "TypeScript",
+      "React",
+      "Node.js",
+      "PostgreSQL"
+    ]
+  },
+  {
+    "id": "job-84",
+    "title": "Product Manager",
+    "company": "Coldwater Studio",
+    "country": "Canada",
+    "employmentType": "Full-time",
+    "description": "Coldwater Studio is hiring a Product Manager to join our team in Canada. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Coldwater Studio.",
+    "techStack": [
+      "Jira",
+      "Figma",
+      "SQL",
+      "Amplitude"
+    ]
+  },
+  {
+    "id": "job-85",
+    "title": "Data Scientist",
+    "company": "Bright Harbor Media",
+    "country": "France",
+    "employmentType": "Full-time",
+    "description": "Bright Harbor Media is hiring a Data Scientist to join our team in France. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Bright Harbor Media.",
+    "techStack": [
+      "Python",
+      "Pandas",
+      "scikit-learn",
+      "SQL"
+    ]
+  },
+  {
+    "id": "job-86",
+    "title": "DevOps Engineer",
+    "company": "Pinecrest AI",
+    "country": "Poland",
+    "employmentType": "Part-time",
+    "description": "Pinecrest AI is hiring a DevOps Engineer to join our team in Poland. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Pinecrest AI.",
+    "techStack": [
+      "Docker",
+      "Kubernetes",
+      "Terraform",
+      "AWS"
+    ]
+  },
+  {
+    "id": "job-87",
+    "title": "UX Designer",
+    "company": "Greenfield Energy",
+    "country": "Germany",
+    "employmentType": "Full-time",
+    "description": "Greenfield Energy is hiring a UX Designer to join our team in Germany. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Greenfield Energy.",
+    "techStack": [
+      "Figma",
+      "Sketch",
+      "Adobe XD",
+      "Zeplin"
+    ]
+  },
+  {
+    "id": "job-88",
+    "title": "QA Engineer",
+    "company": "Lattice Works",
+    "country": "India",
+    "employmentType": "Full-time",
+    "description": "Lattice Works is hiring a QA Engineer to join our team in India. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Lattice Works.",
+    "techStack": [
+      "Cypress",
+      "Playwright",
+      "Jest",
+      "Postman"
+    ]
+  },
+  {
+    "id": "job-89",
+    "title": "Mobile Engineer (iOS)",
+    "company": "Fieldstone Software",
+    "country": "South Africa",
+    "employmentType": "Full-time",
+    "description": "Fieldstone Software is hiring a Mobile Engineer (iOS) to join our team in South Africa. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Fieldstone Software.",
+    "techStack": [
+      "Swift",
+      "SwiftUI",
+      "Xcode",
+      "Combine"
+    ]
+  },
+  {
+    "id": "job-90",
+    "title": "Mobile Engineer (Android)",
+    "company": "Silverton Robotics",
+    "country": "Ireland",
+    "employmentType": "Full-time",
+    "description": "Silverton Robotics is hiring a Mobile Engineer (Android) to join our team in Ireland. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Silverton Robotics.",
+    "techStack": [
+      "Kotlin",
+      "Jetpack Compose",
+      "Android Studio",
+      "Coroutines"
+    ]
+  },
+  {
+    "id": "job-91",
+    "title": "Site Reliability Engineer",
+    "company": "Ashgrove Health Tech",
+    "country": "Japan",
+    "employmentType": "Part-time",
+    "description": "Ashgrove Health Tech is hiring a Site Reliability Engineer to join our team in Japan. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Ashgrove Health Tech.",
+    "techStack": [
+      "Kubernetes",
+      "Prometheus",
+      "Terraform",
+      "Go"
+    ]
+  },
+  {
+    "id": "job-92",
+    "title": "Machine Learning Engineer",
+    "company": "Wells & Fenn",
+    "country": "United Arab Emirates",
+    "employmentType": "Full-time",
+    "description": "Wells & Fenn is hiring a Machine Learning Engineer to join our team in United Arab Emirates. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Wells & Fenn.",
+    "techStack": [
+      "Python",
+      "PyTorch",
+      "TensorFlow",
+      "MLflow"
+    ]
+  },
+  {
+    "id": "job-93",
+    "title": "Data Analyst",
+    "company": "Redshift Logistics",
+    "country": "Singapore",
+    "employmentType": "Full-time",
+    "description": "Redshift Logistics is hiring a Data Analyst to join our team in Singapore. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Redshift Logistics.",
+    "techStack": [
+      "SQL",
+      "Python",
+      "Tableau",
+      "Excel"
+    ]
+  },
+  {
+    "id": "job-94",
+    "title": "Technical Writer",
+    "company": "Nova Systems",
+    "country": "Brazil",
+    "employmentType": "Full-time",
+    "description": "Nova Systems is hiring a Technical Writer to join our team in Brazil. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Nova Systems.",
+    "techStack": [
+      "Markdown",
+      "Git",
+      "Confluence",
+      "Docusaurus"
+    ]
+  },
+  {
+    "id": "job-95",
+    "title": "Solutions Architect",
+    "company": "Harbor Digital",
+    "country": "Australia",
+    "employmentType": "Full-time",
+    "description": "Harbor Digital is hiring a Solutions Architect to join our team in Australia. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Harbor Digital.",
+    "techStack": [
+      "AWS",
+      "Terraform",
+      "Kubernetes",
+      "Node.js"
+    ]
+  },
+  {
+    "id": "job-96",
+    "title": "Engineering Manager",
+    "company": "Northbridge Analytics",
+    "country": "New Zealand",
+    "employmentType": "Part-time",
+    "description": "Northbridge Analytics is hiring a Engineering Manager to join our team in New Zealand. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Northbridge Analytics.",
+    "techStack": [
+      "Jira",
+      "Git",
+      "TypeScript",
+      "AWS"
+    ]
+  },
+  {
+    "id": "job-97",
+    "title": "Customer Success Manager",
+    "company": "Meridian Data",
+    "country": "Mexico",
+    "employmentType": "Full-time",
+    "description": "Meridian Data is hiring a Customer Success Manager to join our team in Mexico. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Meridian Data.",
+    "techStack": [
+      "Salesforce",
+      "Zendesk",
+      "HubSpot",
+      "SQL"
+    ]
+  },
+  {
+    "id": "job-98",
+    "title": "Sales Engineer",
+    "company": "Ironpeak Security",
+    "country": "United States",
+    "employmentType": "Full-time",
+    "description": "Ironpeak Security is hiring a Sales Engineer to join our team in United States. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Ironpeak Security.",
+    "techStack": [
+      "Salesforce",
+      "REST APIs",
+      "SQL",
+      "Postman"
+    ]
+  },
+  {
+    "id": "job-99",
+    "title": "Security Engineer",
+    "company": "Origami Finance",
+    "country": "Netherlands",
+    "employmentType": "Full-time",
+    "description": "Origami Finance is hiring a Security Engineer to join our team in Netherlands. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Origami Finance.",
+    "techStack": [
+      "AWS",
+      "Terraform",
+      "Python",
+      "Splunk"
+    ]
+  },
+  {
+    "id": "job-100",
+    "title": "Business Analyst",
+    "company": "Anchorpoint Retail",
+    "country": "Sweden",
+    "employmentType": "Full-time",
+    "description": "Anchorpoint Retail is hiring a Business Analyst to join our team in Sweden. You'll work closely with cross-functional partners to design, build, and ship features that customers rely on every day. We're looking for someone who cares about quality, communicates clearly, and enjoys solving real problems for real users. In this role you'll take ownership of projects end to end, collaborate with teammates across time zones, and help shape the roadmap. We offer a supportive team, flexible working arrangements, and room to grow your career at Anchorpoint Retail.",
+    "techStack": [
+      "SQL",
+      "Excel",
+      "Power BI",
+      "Jira"
+    ]
+  }
+]

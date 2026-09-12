@@ -2,11 +2,13 @@
   "name": "elcorrecto",
   "private": true,
   "scripts": {
-    "build": "npm run build:api && npm run build:frontend",
+    "build": "npm run build:api && npm run build:backend && npm run build:frontend",
     "build:api": "npm --prefix api run build",
+    "build:backend": "npm --prefix backend run build",
     "build:frontend": "npm --prefix frontend run build",
     "start": "npm run start:api",
     "start:api": "npm --prefix api run start",
+    "start:backend": "npm --prefix backend run dev",
     "start:frontend": "npm --prefix frontend run dev"
   }
 }

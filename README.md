@@ -8,6 +8,7 @@ The application uses a React and TypeScript frontend with Ant Design and Tailwin
 
 ```text
 api/       Azure Functions API and Azure service integrations
+backend/   Express API serving job listings for the Jobs page
 frontend/  React, TypeScript, Vite, Ant Design, and Tailwind UI
 bruno/     Bruno collection for testing the API
 ```
@@ -49,6 +50,7 @@ Install dependencies in both workspaces:
 
 ```bash
 npm install --prefix api
+npm install --prefix backend
 npm install --prefix frontend
 ```
 
@@ -77,7 +79,15 @@ npm start
 
 The API runs at `http://localhost:7071/api/analyze-resume`.
 
-Start the frontend in a second terminal:
+Start the jobs backend in a second terminal:
+
+```bash
+npm run start:backend
+```
+
+The jobs API runs at `http://localhost:4000/api/jobs`. The frontend reads its URL from `VITE_JOBS_API_URL`.
+
+Start the frontend in another terminal:
 
 ```bash
 npm run start:frontend
