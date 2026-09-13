@@ -68,12 +68,12 @@ Copy the jobs/profile backend's env template and add your credentials:
 cp backend/.env.example backend/.env
 ```
 
-`backend/.env` needs the Azure SQL Database connection details (`SQL_SERVER`, `SQL_DATABASE`, `SQL_USER`, `SQL_PASSWORD`) and the same Blob Storage connection string/container used by the `api` workspace, since profile resumes are stored in the same `resumes` container. Before running the backend for the first time, create the `Profiles` table by running [backend/sql/create-profiles-table.sql](backend/sql/create-profiles-table.sql) against the database (e.g. via the Azure Portal's Query Editor). The SQL server's firewall must allow the connecting IP — either your own machine's, or "Allow Azure services" for Azure-hosted deployments.
+`backend/.env` needs the Azure SQL Database connection details (`SQL_SERVER`, `SQL_DATABASE`, `SQL_USER`, `SQL_PASSWORD`) and the same Blob Storage connection string/container used by the `api` workspace, since profile resumes are stored in the same `resumes` container. Before running the backend for the first time, create the `Profiles` and `Jobs` tables by running [backend/sql/create-profiles-table.sql](backend/sql/create-profiles-table.sql) and [backend/sql/create-jobs-table.sql](backend/sql/create-jobs-table.sql) against the database (e.g. via the Azure Portal's Query Editor) and populate `Jobs` with your own listings. Both tables are accessed through TypeORM — see `backend/src/entities/`. The SQL server's firewall must allow the connecting IP — either your own machine's, or "Allow Azure services" for Azure-hosted deployments.
 
 Required Azure services:
 
 - Azure Storage Account with a `resumes` Blob container
-- Azure SQL Database (for profile records)
+- Azure SQL Database (for job listings and profile records)
 - Azure Document Intelligence resource
 - Azure AI Foundry model deployment
 - Azure Function App

@@ -1,10 +1,6 @@
 import { Column, Entity, PrimaryColumn } from 'typeorm'
 import type { SeniorityLevel } from '../types/profile'
-
-const jsonArrayTransformer = {
-  to: (value: string[]): string => JSON.stringify(value ?? []),
-  from: (value: string): string[] => (value ? JSON.parse(value) : []),
-}
+import { jsonArrayTransformer } from '../utils/transformers'
 
 @Entity({ name: 'Profiles' })
 export class ProfileEntity {

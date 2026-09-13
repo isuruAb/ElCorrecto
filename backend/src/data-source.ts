@@ -1,5 +1,6 @@
 import 'reflect-metadata'
 import { DataSource } from 'typeorm'
+import { JobEntity } from './entities/Job'
 import { ProfileEntity } from './entities/Profile'
 
 export const AppDataSource = new DataSource({
@@ -12,7 +13,7 @@ export const AppDataSource = new DataSource({
     encrypt: true,
   },
   synchronize: false,
-  entities: [ProfileEntity],
+  entities: [ProfileEntity, JobEntity],
 })
 
 let initPromise: Promise<DataSource> | null = null

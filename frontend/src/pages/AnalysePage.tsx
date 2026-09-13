@@ -98,22 +98,16 @@ const AnalysePage = () => {
     setAnalysis(null)
     setIsLoading(true)
     try {
-      const resumeFile =
-        useProfileResume && profile
-          ? new File(
-              [(await axios.get(profile.resumeBlobUrl, { responseType: 'blob' })).data],
-              profile.resumeFileName,
-              { type: 'application/pdf' },
-            )
-          : resume
-
-      if (!resumeFile) {
+      const formData = new FormData()
+      if (useProfileResume && profile) {
+        formData.append('resumeBlobUrl', profile.resumeBlobUrl)
+        formData.append('resumeFileName', profile.resumeFileName)
+      } else if (resume) {
+        formData.append('resume', resume)
+      } else {
         setError(t('analyse.errors.missingFields'))
         return
       }
-
-      const formData = new FormData()
-      formData.append('resume', resumeFile)
       formData.append('jobDescription', jobDescription)
       const languageName =
         SUPPORTED_LANGUAGES.find((language) => language.key === i18n.resolvedLanguage)?.name ??
