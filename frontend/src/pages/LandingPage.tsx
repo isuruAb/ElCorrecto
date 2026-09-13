@@ -11,7 +11,7 @@ const LandingPage = () => {
 
   return (
     <Layout footerRight={t('landing.footerRight')}>
-      <section className="max-w-[760px] pb-[90px] pt-[clamp(80px,14vw,170px)]">
+      <section className="max-w-[760px] pb-[90px] pt-[clamp(80px,14vw,100px)]">
         <p className="m-0 font-mono text-[11px] font-medium tracking-[1.2px] text-(--muted)">
           {t('landing.kicker')}
         </p>
