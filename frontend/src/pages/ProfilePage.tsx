@@ -59,7 +59,11 @@ const ProfilePage = () => {
     queryKey: ['profile', email],
     queryFn: async () => {
       try {
-        const response = await axios.get<Profile>(profileFunctionUrl, { params: { email } })
+        const accessToken = await getAccessTokenSilently()
+        const response = await axios.get<Profile>(profileFunctionUrl, {
+          params: { email },
+          headers: { Authorization: `Bearer ${accessToken}` },
+        })
         return response.data
       } catch (requestError) {
         if (axios.isAxiosError(requestError) && requestError.response?.status === 404) {

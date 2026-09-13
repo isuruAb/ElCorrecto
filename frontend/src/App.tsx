@@ -9,9 +9,11 @@ import LandingPage from './pages/LandingPage'
 import NotFoundPage from './pages/NotFoundPage'
 import ProfilePage from './pages/ProfilePage'
 import { useTheme } from './hooks/useTheme'
+import { useAuthAxiosInterceptor } from './hooks/useAuthAxiosInterceptor'
 
 const App = () => {
   const { theme } = useTheme()
+  useAuthAxiosInterceptor()
 
   return (
     <ConfigProvider

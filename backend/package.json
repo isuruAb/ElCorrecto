@@ -16,6 +16,7 @@
     "cors": "^2.8.5",
     "dotenv": "^17.4.2",
     "express": "^4.19.2",
+    "express-oauth2-jwt-bearer": "^1.10.0",
     "mssql": "^12.7.2",
     "multer": "^2.3.0",
     "uuid": "^14.0.2"
