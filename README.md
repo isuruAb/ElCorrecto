@@ -8,7 +8,7 @@ The application uses a React and TypeScript frontend with Ant Design and Tailwin
 
 ```text
 api/       Azure Functions API and Azure service integrations
-backend/   Express API serving job listings and user profiles (Azure SQL + Blob Storage)
+backend/   Express API serving job listings and user profiles (TypeORM on Azure SQL + Blob Storage)
 frontend/  React, TypeScript, Vite, Ant Design, and Tailwind UI
 bruno/     Bruno collection for testing the API
 ```
