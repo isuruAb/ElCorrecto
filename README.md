@@ -8,7 +8,7 @@ The application uses a React and TypeScript frontend with Ant Design and Tailwin
 
 ```text
 api/       Azure Functions API and Azure service integrations
-backend/   Express API serving job listings for the Jobs page
+backend/   Express API serving job listings and user profiles (Azure SQL + Blob Storage)
 frontend/  React, TypeScript, Vite, Ant Design, and Tailwind UI
 bruno/     Bruno collection for testing the API
 ```
@@ -28,7 +28,7 @@ flowchart LR
 
 The application is split into two deployable layers:
 
-- **Frontend:** A Vite-powered React and TypeScript single-page application hosted on Azure Static Web Apps. It handles PDF selection, job-description input, loading and error states, and result presentation. The Azure Function URL is supplied through `VITE_AZURE_FUNCTION_URL`.
+- **Frontend:** A Vite-powered React and TypeScript single-page application hosted on Azure Static Web Apps. It handles PDF selection, job-description input, loading and error states, and result presentation. The Azure Function URL is supplied through `VITE_AZURE_FUNCTION_URL`, and the profile API through `VITE_PROFILE_FUNCTION_URL`.
 - **API:** A Node.js Azure Functions v4 HTTP API hosted in the `analyze-resume` Function App. It validates the multipart request, uploads the PDF, extracts resume text, calls Azure AI Foundry, and returns typed JSON.
 - **Storage and AI services:** Blob Storage retains the uploaded PDF, Document Intelligence performs OCR and text extraction, and Azure AI Foundry evaluates the resume against the job description.
 
@@ -62,9 +62,18 @@ cp api/local.settings.example.json api/local.settings.json
 
 The frontend Function URL is configured in `frontend/.env`. Use `frontend/.env.example` as a template when setting up another environment. Never commit real secrets or local settings files.
 
+Copy the jobs/profile backend's env template and add your credentials:
+
+```bash
+cp backend/.env.example backend/.env
+```
+
+`backend/.env` needs the Azure SQL Database connection details (`SQL_SERVER`, `SQL_DATABASE`, `SQL_USER`, `SQL_PASSWORD`) and the same Blob Storage connection string/container used by the `api` workspace, since profile resumes are stored in the same `resumes` container. Before running the backend for the first time, create the `Profiles` table by running [backend/sql/create-profiles-table.sql](backend/sql/create-profiles-table.sql) against the database (e.g. via the Azure Portal's Query Editor). The SQL server's firewall must allow the connecting IP — either your own machine's, or "Allow Azure services" for Azure-hosted deployments.
+
 Required Azure services:
 
 - Azure Storage Account with a `resumes` Blob container
+- Azure SQL Database (for profile records)
 - Azure Document Intelligence resource
 - Azure AI Foundry model deployment
 - Azure Function App
@@ -85,7 +94,7 @@ Start the jobs backend in a second terminal:
 npm run start:backend
 ```
 
-The jobs API runs at `http://localhost:4000/api/jobs`. The frontend reads its URL from `VITE_JOBS_API_URL`.
+The jobs API runs at `http://localhost:4000/api/jobs` and the profile API at `http://localhost:4000/api/profile`. The frontend reads their URLs from `VITE_JOBS_API_URL` and `VITE_PROFILE_FUNCTION_URL`.
 
 Start the frontend in another terminal:
 
