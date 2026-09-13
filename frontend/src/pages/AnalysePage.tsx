@@ -1,7 +1,8 @@
 import { useState } from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
+import { useQuery } from '@tanstack/react-query'
 import { ArrowRight, Check, FileText, X } from 'lucide-react'
-import { Alert, Card, Input, Progress, Upload } from 'antd'
+import { Alert, Card, Input, Progress, Switch, Upload } from 'antd'
 import axios from 'axios'
 import { useTranslation } from 'react-i18next'
 import { Button } from '../components/Button'
@@ -9,6 +10,7 @@ import { Layout } from '../components/Layout'
 import { PanelHeading } from '../components/PanelHeading'
 import { ResultList } from '../components/ResultList'
 import { SUPPORTED_LANGUAGES } from '../constants/language'
+import type { Profile } from '../types/profile'
 
 type Analysis = {
   matchScore: number
@@ -19,19 +21,45 @@ type Analysis = {
 }
 
 const functionUrl = import.meta.env.VITE_AZURE_FUNCTION_URL
+const profileFunctionUrl = import.meta.env.VITE_PROFILE_FUNCTION_URL
 // antd computes hover/active tints from colorPrimary at theme-build time, so it
 // needs a literal color value here rather than a CSS var (kept in sync with --blue).
 const blue = '#1f5b83'
 const line = 'var(--line)'
 
 const AnalysePage = () => {
-  const { isAuthenticated, loginWithRedirect, getAccessTokenSilently } = useAuth0()
+  const { user, isAuthenticated, loginWithRedirect, getAccessTokenSilently } = useAuth0()
   const { t, i18n } = useTranslation()
   const [resume, setResume] = useState<File | null>(null)
+  const [useProfileResume, setUseProfileResume] = useState(false)
   const [jobDescription, setJobDescription] = useState('')
   const [analysis, setAnalysis] = useState<Analysis | null>(null)
   const [error, setError] = useState('')
   const [isLoading, setIsLoading] = useState(false)
+  const email = user?.email ?? ''
+
+  const { data: profile } = useQuery({
+    queryKey: ['profile', email],
+    queryFn: async () => {
+      try {
+        const accessToken = await getAccessTokenSilently()
+        const response = await axios.get<Profile>(profileFunctionUrl, {
+          params: { email },
+          headers: { Authorization: `Bearer ${accessToken}` },
+        })
+        return response.data
+      } catch (requestError) {
+        if (axios.isAxiosError(requestError) && requestError.response?.status === 404) {
+          return null
+        }
+        throw requestError
+      }
+    },
+    enabled: isAuthenticated && Boolean(email),
+    retry: false,
+  })
+
+  const hasProfileResume = Boolean(profile?.resumeFileName && profile?.resumeBlobUrl)
 
   const chooseResume = (file?: File) => {
     setError('')
@@ -44,13 +72,22 @@ const AnalysePage = () => {
     setResume(file)
   }
 
-  const analyze = async () => {
-    if (!resume || !jobDescription.trim()) {
-      setError(t('analyse.errors.missingFields'))
-      return
+  const toggleUseProfileResume = (checked: boolean) => {
+    setUseProfileResume(checked)
+    setError('')
+    setAnalysis(null)
+    if (checked) {
+      setResume(null)
     }
+  }
+
+  const analyze = async () => {
     if (!isAuthenticated) {
       await loginWithRedirect({ appState: { returnTo: window.location.pathname } })
+      return
+    }
+    if ((!useProfileResume && !resume) || !jobDescription.trim()) {
+      setError(t('analyse.errors.missingFields'))
       return
     }
     if (!functionUrl) {
@@ -60,14 +97,28 @@ const AnalysePage = () => {
     setError('')
     setAnalysis(null)
     setIsLoading(true)
-    const formData = new FormData()
-    formData.append('resume', resume)
-    formData.append('jobDescription', jobDescription)
-    const languageName =
-      SUPPORTED_LANGUAGES.find((language) => language.key === i18n.resolvedLanguage)?.name ??
-      SUPPORTED_LANGUAGES[0].name
-    formData.append('language', languageName)
     try {
+      const resumeFile =
+        useProfileResume && profile
+          ? new File(
+              [(await axios.get(profile.resumeBlobUrl, { responseType: 'blob' })).data],
+              profile.resumeFileName,
+              { type: 'application/pdf' },
+            )
+          : resume
+
+      if (!resumeFile) {
+        setError(t('analyse.errors.missingFields'))
+        return
+      }
+
+      const formData = new FormData()
+      formData.append('resume', resumeFile)
+      formData.append('jobDescription', jobDescription)
+      const languageName =
+        SUPPORTED_LANGUAGES.find((language) => language.key === i18n.resolvedLanguage)?.name ??
+        SUPPORTED_LANGUAGES[0].name
+      formData.append('language', languageName)
       const accessToken = await getAccessTokenSilently()
       const response = await axios.post<Analysis>(functionUrl, formData, {
         headers: { Authorization: `Bearer ${accessToken}` },
@@ -105,32 +156,59 @@ const AnalysePage = () => {
           className="row-span-2 flex h-full min-h-0 flex-col border bg-(--surface) p-[27px]"
           style={{ borderColor: line }}
         >
-          <PanelHeading number="01" title={t('analyse.resumePanelTitle')} />
-          <Upload.Dragger
-            accept=".pdf,application/pdf"
-            maxCount={1}
-            multiple={false}
-            openFileDialogOnClick
-            beforeUpload={(file) => {
-              chooseResume(file)
-              return false
-            }}
-            showUploadList={false}
-            className="min-h-[215px] flex-1 overflow-hidden [&_.ant-upload.ant-upload-drag]:box-border [&_.ant-upload.ant-upload-drag]:h-full [&_.ant-upload.ant-upload-drag]:min-h-0 [&_.ant-upload.ant-upload-drag]:rounded-none [&_.ant-upload.ant-upload-drag]:border-(--border) [&_.ant-upload.ant-upload-drag]:bg-(--surface-soft) [&_.ant-upload-drag-container]:flex [&_.ant-upload-drag-container]:h-full [&_.ant-upload-drag-container]:flex-col [&_.ant-upload-drag-container]:items-center [&_.ant-upload-drag-container]:justify-center [&_.ant-upload-drag-container]:gap-2.5 [&_.ant-upload-drag-container]:text-(--blue)"
-          >
-            <div className="flex flex-col items-center gap-2.5 text-center">
-              <FileText size={34} strokeWidth={1.5} />
-              <p className="!m-0 !text-[15px] text-(--navy)!">
-                {resume ? resume.name : t('analyse.dropPrompt')}
-              </p>
-              <p className="!m-0 !text-xs text-(--muted)!">
-                {resume
-                  ? t('analyse.fileReady', { size: (resume.size / 1024 / 1024).toFixed(2) })
-                  : t('analyse.dropHint')}
-              </p>
+          <PanelHeading
+            number="01"
+            title={t('analyse.resumePanelTitle')}
+            action={
+              <label className="flex items-center gap-2">
+                <span className="font-mono text-[10px] tracking-[0.4px] text-(--muted)">
+                  {t('analyse.useProfileResumeLabel')}
+                </span>
+                <Switch
+                  size="small"
+                  checked={useProfileResume}
+                  disabled={!hasProfileResume}
+                  onChange={toggleUseProfileResume}
+                />
+              </label>
+            }
+          />
+          {useProfileResume ? (
+            <div
+              className="flex min-h-[215px] flex-1 flex-col items-center justify-center gap-2.5 border border-dashed text-center"
+              style={{ borderColor: line }}
+            >
+              <FileText size={34} strokeWidth={1.5} className="text-(--blue)" />
+              <p className="!m-0 !text-[15px] text-(--navy)!">{profile?.resumeFileName}</p>
+              <p className="!m-0 !text-xs text-(--muted)!">{t('analyse.usingProfileResume')}</p>
             </div>
-          </Upload.Dragger>
-          {resume && (
+          ) : (
+            <Upload.Dragger
+              accept=".pdf,application/pdf"
+              maxCount={1}
+              multiple={false}
+              openFileDialogOnClick
+              beforeUpload={(file) => {
+                chooseResume(file)
+                return false
+              }}
+              showUploadList={false}
+              className="min-h-[215px] flex-1 overflow-hidden [&_.ant-upload.ant-upload-drag]:box-border [&_.ant-upload.ant-upload-drag]:h-full [&_.ant-upload.ant-upload-drag]:min-h-0 [&_.ant-upload.ant-upload-drag]:rounded-none [&_.ant-upload.ant-upload-drag]:border-(--border) [&_.ant-upload.ant-upload-drag]:bg-(--surface-soft) [&_.ant-upload-drag-container]:flex [&_.ant-upload-drag-container]:h-full [&_.ant-upload-drag-container]:flex-col [&_.ant-upload-drag-container]:items-center [&_.ant-upload-drag-container]:justify-center [&_.ant-upload-drag-container]:gap-2.5 [&_.ant-upload-drag-container]:text-(--blue)"
+            >
+              <div className="flex flex-col items-center gap-2.5 text-center">
+                <FileText size={34} strokeWidth={1.5} />
+                <p className="!m-0 !text-[15px] text-(--navy)!">
+                  {resume ? resume.name : t('analyse.dropPrompt')}
+                </p>
+                <p className="!m-0 !text-xs text-(--muted)!">
+                  {resume
+                    ? t('analyse.fileReady', { size: (resume.size / 1024 / 1024).toFixed(2) })
+                    : t('analyse.dropHint')}
+                </p>
+              </div>
+            </Upload.Dragger>
+          )}
+          {resume && !useProfileResume && (
             <Button
               variant="link"
               className="mt-3"

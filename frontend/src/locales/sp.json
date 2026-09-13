@@ -35,6 +35,8 @@
     "description": "Compara un currículum con el puesto al que aspira. Nuestro análisis destaca la afinidad, las brechas y el próximo paso más sólido.",
     "workspaceLabel": "Espacio de análisis de currículum",
     "resumePanelTitle": "CV en PDF",
+    "useProfileResumeLabel": "Usar el currículum del perfil",
+    "usingProfileResume": "Usando el currículum de tu perfil",
     "dropPrompt": "Suelta tu currículum aquí",
     "dropHint": "o haz clic para explorar tus archivos",
     "fileReady": "{{size}} MB · PDF listo",

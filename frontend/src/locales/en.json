@@ -35,6 +35,8 @@
     "description": "Pair a resume with the role it is reaching for. Our analysis highlights fit, gaps, and the next strongest move.",
     "workspaceLabel": "Resume analysis workspace",
     "resumePanelTitle": "Resume PDF",
+    "useProfileResumeLabel": "Use resume from profile",
+    "usingProfileResume": "Using the resume from your profile",
     "dropPrompt": "Drop your resume here",
     "dropHint": "or click to browse your files",
     "fileReady": "{{size}} MB · PDF ready",

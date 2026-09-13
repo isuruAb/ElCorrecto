@@ -24,3 +24,20 @@ export const uploadResume = async (
 
   return blockBlob.url;
 }
+
+export const downloadResume = async (blobUrl: string): Promise<Buffer> => {
+  const container =
+    blobClient.getContainerClient(
+      process.env.BLOB_CONTAINER_NAME!
+    );
+
+  const containerUrlPrefix = `${container.url}/`;
+  if (!blobUrl.startsWith(containerUrlPrefix)) {
+    throw new Error("Resume blob URL is not recognized");
+  }
+
+  const blobName = decodeURIComponent(blobUrl.slice(containerUrlPrefix.length));
+  const blockBlob = container.getBlockBlobClient(blobName);
+
+  return blockBlob.downloadToBuffer();
+}

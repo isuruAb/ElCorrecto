@@ -8,9 +8,12 @@ export interface AnalysisResult {
 
 export type AnalysisLanguage = "English" | "Spanish";
 
+export type ResumeSource =
+  | { type: "upload"; buffer: Buffer; fileName: string }
+  | { type: "blobUrl"; url: string; fileName: string };
+
 export interface AnalyzeResumeRequest {
-  resumeFile: Buffer;
-  fileName: string;
+  resumeSource: ResumeSource;
   jobDescription: string;
   language: AnalysisLanguage;
 }
