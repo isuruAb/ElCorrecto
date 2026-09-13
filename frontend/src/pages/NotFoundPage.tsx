@@ -1,7 +1,7 @@
 import { ArrowRight } from 'lucide-react'
-import { Button } from 'antd'
 import { useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
+import { Button } from '../components/Button'
 import { Layout } from '../components/Layout'
 import { HOME_ROUTE } from '../constants/route'
 
@@ -24,8 +24,7 @@ const NotFoundPage = () => {
           {t('notFound.description')}
         </p>
         <Button
-          className="!mt-8 !h-auto !rounded-none bg-(--blue)! !px-[18px] !py-[15px] !font-mono !text-[13px] !font-semibold !text-white !shadow-none"
-          type="primary"
+          className="!mt-8"
           onClick={() => navigate(HOME_ROUTE)}
           icon={<ArrowRight size={18} />}
         >

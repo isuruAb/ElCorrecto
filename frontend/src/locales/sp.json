@@ -9,6 +9,8 @@
     "goHome": "Ir al inicio",
     "analyse": "Analizar",
     "jobs": "Empleos",
+    "settings": "Ajustes",
+    "profile": "Perfil",
     "switchToDark": "Cambiar a tema oscuro",
     "switchToLight": "Cambiar a tema claro"
   },
@@ -28,9 +30,8 @@
     "cta": "Volver al inicio"
   },
   "analyse": {
-    "kicker": "ANÁLISIS DE CV / 01",
-    "titleLine1": "Encuentra la señal",
-    "titleEmphasis": "dentro de la historia.",
+    "titleLine1": "Encuentra tu",
+    "titleEmphasis": "mejor coincidencia.",
     "description": "Compara un currículum con el puesto al que aspira. Nuestro análisis destaca la afinidad, las brechas y el próximo paso más sólido.",
     "workspaceLabel": "Espacio de análisis de currículum",
     "resumePanelTitle": "CV en PDF",
@@ -74,6 +75,28 @@
     "selectPrompt": "Selecciona un puesto para ver su descripción.",
     "errors": {
       "generic": "No se pudieron cargar los empleos. Inténtalo de nuevo."
+    }
+  },
+  "profile": {
+    "footerRight": "TU PERFIL",
+    "panelTitle": "Detalles del perfil",
+    "loading": "Cargando tu perfil...",
+    "emailLabel": "Correo electrónico",
+    "resumeLabel": "Currículum / CV",
+    "dropPrompt": "Suelta tu currículum aquí",
+    "dropHint": "o haz clic para explorar tus archivos",
+    "countriesLabel": "Países de interés",
+    "countriesPlaceholder": "Selecciona los países en los que te gustaría trabajar",
+    "positionsLabel": "Puestos de interés",
+    "positionsPlaceholder": "p. ej. Frontend Engineer, Product Manager",
+    "seniorityLabel": "Nivel de experiencia",
+    "seniorityPlaceholder": "Selecciona tu nivel de experiencia",
+    "saveButton": "Guardar perfil",
+    "savingButton": "Guardando",
+    "saved": "Guardado",
+    "errors": {
+      "loadFailed": "No se pudo cargar tu perfil. Inténtalo de nuevo.",
+      "generic": "No se pudo guardar tu perfil. Inténtalo de nuevo."
     }
   }
 }

@@ -1,9 +1,10 @@
 import { useAuth0 } from '@auth0/auth0-react'
-import { ChevronDown, LogIn, LogOut, Moon, Sun } from 'lucide-react'
-import { Link } from 'react-router-dom'
+import { ChevronDown, LogIn, LogOut, Moon, Settings, Sun, User } from 'lucide-react'
+import { Link, useNavigate } from 'react-router-dom'
 import { useTranslation } from 'react-i18next'
-import { Select } from 'antd'
-import { ANALYSE_ROUTE, HOME_ROUTE, JOBS_ROUTE } from '../constants/route'
+import { Dropdown, Select } from 'antd'
+import type { MenuProps } from 'antd'
+import { ANALYSE_ROUTE, HOME_ROUTE, JOBS_ROUTE, PROFILE_ROUTE } from '../constants/route'
 import { SUPPORTED_LANGUAGES } from '../constants/language'
 import { THEMES } from '../constants/theme'
 import { useTheme } from '../hooks/useTheme'
@@ -13,6 +14,22 @@ export const Header = () => {
   const { isAuthenticated, loginWithRedirect, logout } = useAuth0()
   const { t, i18n } = useTranslation()
   const { theme, toggleTheme } = useTheme()
+  const navigate = useNavigate()
+
+  const settingsItems: MenuProps['items'] = [
+    {
+      key: 'profile',
+      label: t('header.profile'),
+      icon: <User size={14} />,
+      onClick: () => navigate(PROFILE_ROUTE),
+    },
+    {
+      key: 'logout',
+      label: t('header.logOut'),
+      icon: <LogOut size={14} />,
+      onClick: () => logout({ logoutParams: { returnTo: window.location.origin } }),
+    },
+  ]
 
   return (
     <header
@@ -47,14 +64,16 @@ export const Header = () => {
           options={SUPPORTED_LANGUAGES.map(({ key, name }) => ({ value: key, label: name }))}
         />
         {isAuthenticated ? (
-          <button
-            type="button"
-            className="flex items-center gap-1.5 font-mono text-[11px] text-(--blue)"
-            onClick={() => logout({ logoutParams: { returnTo: window.location.origin } })}
-          >
-            <LogOut size={14} />
-            {t('header.logOut')}
-          </button>
+          <Dropdown menu={{ items: settingsItems }} trigger={['click']} placement="bottomRight">
+            <button
+              type="button"
+              className="flex items-center gap-1.5 font-mono text-[11px] text-(--blue)"
+            >
+              <Settings size={14} />
+              {t('header.settings')}
+              <ChevronDown size={12} />
+            </button>
+          </Dropdown>
         ) : (
           <button
             type="button"

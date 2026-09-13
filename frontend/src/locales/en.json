@@ -9,6 +9,8 @@
     "goHome": "Go to home",
     "analyse": "Analyse",
     "jobs": "Jobs",
+    "settings": "Settings",
+    "profile": "Profile",
     "switchToDark": "Switch to dark theme",
     "switchToLight": "Switch to light theme"
   },
@@ -28,9 +30,8 @@
     "cta": "Back to home"
   },
   "analyse": {
-    "kicker": "CV ANALYSIS / 01",
-    "titleLine1": "Find the signal",
-    "titleEmphasis": "inside the story.",
+    "titleLine1": "Find your",
+    "titleEmphasis": "best match.",
     "description": "Pair a resume with the role it is reaching for. Our analysis highlights fit, gaps, and the next strongest move.",
     "workspaceLabel": "Resume analysis workspace",
     "resumePanelTitle": "Resume PDF",
@@ -74,6 +75,28 @@
     "selectPrompt": "Select a role to see its description.",
     "errors": {
       "generic": "Couldn't load jobs. Please try again."
+    }
+  },
+  "profile": {
+    "footerRight": "YOUR PROFILE",
+    "panelTitle": "Profile details",
+    "loading": "Loading your profile...",
+    "emailLabel": "Email",
+    "resumeLabel": "Resume / CV",
+    "dropPrompt": "Drop your resume here",
+    "dropHint": "or click to browse your files",
+    "countriesLabel": "Interested countries",
+    "countriesPlaceholder": "Select the countries you'd consider working in",
+    "positionsLabel": "Interested positions",
+    "positionsPlaceholder": "e.g. Frontend Engineer, Product Manager",
+    "seniorityLabel": "Seniority level",
+    "seniorityPlaceholder": "Select your seniority level",
+    "saveButton": "Save profile",
+    "savingButton": "Saving",
+    "saved": "Saved",
+    "errors": {
+      "loadFailed": "Couldn't load your profile. Please try again.",
+      "generic": "Couldn't save your profile. Please try again."
     }
   }
 }

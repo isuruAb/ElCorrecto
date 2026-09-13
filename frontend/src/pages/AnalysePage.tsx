@@ -1,9 +1,10 @@
 import { useState } from 'react'
 import { useAuth0 } from '@auth0/auth0-react'
 import { ArrowRight, Check, FileText, X } from 'lucide-react'
-import { Alert, Button, Card, Input, Progress, Upload } from 'antd'
+import { Alert, Card, Input, Progress, Upload } from 'antd'
 import axios from 'axios'
 import { useTranslation } from 'react-i18next'
+import { Button } from '../components/Button'
 import { Layout } from '../components/Layout'
 import { PanelHeading } from '../components/PanelHeading'
 import { ResultList } from '../components/ResultList'
@@ -88,12 +89,8 @@ const AnalysePage = () => {
   return (
     <Layout footerRight={t('analyse.footerRight')}>
       <section className="max-w-[620px] pb-[62px] pt-[clamp(58px,9vw,112px)]">
-        <p className="m-0 font-mono text-[11px] font-medium tracking-[1.2px] text-(--muted)">
-          {t('analyse.kicker')}
-        </p>
-        <h2 className="m-[13px_0_18px] font-serif text-[clamp(42px,6vw,74px)] font-semibold leading-[.98] tracking-[-1px] text-(--navy)">
-          {t('analyse.titleLine1')}
-          <br />
+        <h2 className="m-[0_0_18px] font-serif text-[clamp(42px,6vw,74px)] font-semibold leading-[.98] tracking-[-1px] text-(--navy)">
+          {t('analyse.titleLine1')}{' '}
           <em className="text-(--blue)">{t('analyse.titleEmphasis')}</em>
         </h2>
         <p className="max-w-[420px] text-base leading-[1.65] text-(--muted)">
@@ -135,8 +132,8 @@ const AnalysePage = () => {
           </Upload.Dragger>
           {resume && (
             <Button
-              className="mt-3 h-auto p-0 text-(--blue)"
-              type="link"
+              variant="link"
+              className="mt-3"
               icon={<X size={14} />}
               onClick={() => setResume(null)}
             >
@@ -164,8 +161,6 @@ const AnalysePage = () => {
         <div className="flex min-h-[62px] items-center justify-end gap-5">
           <div className="h-px flex-1" style={{ backgroundColor: line }} />
           <Button
-            className="!h-auto !rounded-none bg-(--blue)! !px-[18px] !py-[15px] !font-mono !text-[13px] !font-semibold !text-white !shadow-none"
-            type="primary"
             onClick={analyze}
             loading={isLoading}
             icon={!isLoading && <ArrowRight size={18} />}

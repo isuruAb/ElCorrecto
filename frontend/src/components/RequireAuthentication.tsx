@@ -5,16 +5,17 @@ import { ANALYSE_ROUTE } from '../constants/route'
 
 type RequireAuthenticationProps = {
   children: ReactNode
+  returnTo?: string
 }
 
-const RequireAuthentication = ({ children }: RequireAuthenticationProps) => {
+const RequireAuthentication = ({ children, returnTo = ANALYSE_ROUTE }: RequireAuthenticationProps) => {
   const { isAuthenticated, isLoading, loginWithRedirect } = useAuth0()
 
   useEffect(() => {
     if (!isLoading && !isAuthenticated) {
-      void loginWithRedirect({ appState: { returnTo: ANALYSE_ROUTE } })
+      void loginWithRedirect({ appState: { returnTo } })
     }
-  }, [isAuthenticated, isLoading, loginWithRedirect])
+  }, [isAuthenticated, isLoading, loginWithRedirect, returnTo])
 
   if (isLoading || !isAuthenticated) {
     return null
