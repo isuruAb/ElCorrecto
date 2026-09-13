@@ -5,9 +5,9 @@ import { useTranslation } from 'react-i18next'
 import { Layout } from '../components/Layout'
 import { PanelHeading } from '../components/PanelHeading'
 import { JobListItem } from '../components/JobListItem'
+import { JOBS_API_URL } from '../constants/api'
 import type { Job, JobsPageResponse } from '../types/job'
 
-const jobsApiUrl = import.meta.env.VITE_JOBS_API_URL
 const PAGE_SIZE = 10
 
 const JobsPage = () => {
@@ -26,7 +26,7 @@ const JobsPage = () => {
   } = useInfiniteQuery({
     queryKey: ['jobs'],
     queryFn: async ({ pageParam }) => {
-      const response = await axios.get<JobsPageResponse>(jobsApiUrl, {
+      const response = await axios.get<JobsPageResponse>(JOBS_API_URL, {
         params: { page: pageParam, limit: PAGE_SIZE },
       })
       return response.data

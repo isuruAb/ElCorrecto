@@ -13,11 +13,10 @@ import { FieldError } from '../components/form/FieldError'
 import { Layout } from '../components/Layout'
 import { PanelHeading } from '../components/PanelHeading'
 import { RequiredLabel } from '../components/form/RequiredLabel'
+import { PROFILE_API_URL } from '../constants/api'
 import { COUNTRIES } from '../constants/country'
 import { SENIORITY_LEVELS } from '../constants/seniority'
 import type { Profile } from '../types/profile'
-
-const profileFunctionUrl = import.meta.env.VITE_PROFILE_FUNCTION_URL
 const line = 'var(--line)'
 
 const profileFormShape = z.object({
@@ -60,7 +59,7 @@ const ProfilePage = () => {
     queryFn: async () => {
       try {
         const accessToken = await getAccessTokenSilently()
-        const response = await axios.get<Profile>(profileFunctionUrl, {
+        const response = await axios.get<Profile>(PROFILE_API_URL, {
           params: { email },
           headers: { Authorization: `Bearer ${accessToken}` },
         })
@@ -90,7 +89,7 @@ const ProfilePage = () => {
     }
     try {
       const accessToken = await getAccessTokenSilently()
-      const response = await axios.post<Profile>(profileFunctionUrl, formData, {
+      const response = await axios.post<Profile>(PROFILE_API_URL, formData, {
         headers: { Authorization: `Bearer ${accessToken}` },
       })
       queryClient.setQueryData(['profile', email], response.data)

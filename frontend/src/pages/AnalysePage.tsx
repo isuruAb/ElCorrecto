@@ -9,6 +9,7 @@ import { Button } from '../components/Button'
 import { Layout } from '../components/Layout'
 import { PanelHeading } from '../components/PanelHeading'
 import { ResultList } from '../components/ResultList'
+import { PROFILE_API_URL } from '../constants/api'
 import { SUPPORTED_LANGUAGES } from '../constants/language'
 import type { Profile } from '../types/profile'
 
@@ -21,7 +22,6 @@ type Analysis = {
 }
 
 const functionUrl = import.meta.env.VITE_AZURE_FUNCTION_URL
-const profileFunctionUrl = import.meta.env.VITE_PROFILE_FUNCTION_URL
 // antd computes hover/active tints from colorPrimary at theme-build time, so it
 // needs a literal color value here rather than a CSS var (kept in sync with --blue).
 const blue = '#1f5b83'
@@ -43,7 +43,7 @@ const AnalysePage = () => {
     queryFn: async () => {
       try {
         const accessToken = await getAccessTokenSilently()
-        const response = await axios.get<Profile>(profileFunctionUrl, {
+        const response = await axios.get<Profile>(PROFILE_API_URL, {
           params: { email },
           headers: { Authorization: `Bearer ${accessToken}` },
         })

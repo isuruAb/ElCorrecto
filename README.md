@@ -28,7 +28,7 @@ flowchart LR
 
 The application is split into two deployable layers:
 
-- **Frontend:** A Vite-powered React and TypeScript single-page application hosted on Azure Static Web Apps. It handles PDF selection, job-description input, loading and error states, and result presentation. The Azure Function URL is supplied through `VITE_AZURE_FUNCTION_URL`, and the profile API through `VITE_PROFILE_FUNCTION_URL`.
+- **Frontend:** A Vite-powered React and TypeScript single-page application hosted on Azure Static Web Apps. It handles PDF selection, job-description input, loading and error states, and result presentation. The Azure Function URL is supplied through `VITE_AZURE_FUNCTION_URL`, and the jobs/profile backend through `VITE_BACKEND_BASE_URL` (the `/api/jobs` and `/api/profile` paths are appended in code — see `frontend/src/constants/api.ts`).
 - **API:** A Node.js Azure Functions v4 HTTP API hosted in the `analyze-resume` Function App. It validates the multipart request, uploads the PDF, extracts resume text, calls Azure AI Foundry, and returns typed JSON.
 - **Storage and AI services:** Blob Storage retains the uploaded PDF, Document Intelligence performs OCR and text extraction, and Azure AI Foundry evaluates the resume against the job description.
 
@@ -94,7 +94,7 @@ Start the jobs backend in a second terminal:
 npm run start:backend
 ```
 
-The jobs API runs at `http://localhost:4000/api/jobs` and the profile API at `http://localhost:4000/api/profile`. The frontend reads their URLs from `VITE_JOBS_API_URL` and `VITE_PROFILE_FUNCTION_URL`.
+The jobs API runs at `http://localhost:4000/api/jobs` and the profile API at `http://localhost:4000/api/profile`. The frontend reads `VITE_BACKEND_BASE_URL` (e.g. `http://localhost:4000/`) and appends each path itself.
 
 Start the frontend in another terminal:
 
