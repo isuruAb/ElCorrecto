@@ -2,6 +2,7 @@ import { getDataSource } from '../data-source'
 import { ProfileEntity } from '../entities/Profile'
 import type { Profile } from '../types/profile'
 
+// TODO: Here we check the user but we do not check the email in the request body belongs to that user.
 export const getProfile = async (email: string): Promise<Profile | null> => {
   const dataSource = await getDataSource()
   const entity = await dataSource.getRepository(ProfileEntity).findOneBy({ email })
