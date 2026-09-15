@@ -125,6 +125,37 @@ Format the frontend with Prettier:
 npm --prefix frontend run format
 ```
 
+## Deployment
+
+**Frontend** deploys automatically via [GitHub Actions](.github/workflows/azure-static-web-apps-gentle-beach-010a9ef0f.yml) on every push to `main`. See [frontend/README.md](frontend/README.md#deployment) for the manual `swa deploy` alternative.
+
+**Backend** (`backend/`) deploys automatically via [GitHub Actions](.github/workflows/deploy-backend.yml) on every push to `main` that touches `backend/**`.
+
+To deploy it manually instead:
+
+```bash
+cd backend
+rm -rf dist
+npm run build
+
+rm -rf deploy && mkdir deploy
+cp package.json package-lock.json deploy/
+cp -r dist deploy/dist
+(cd deploy && npm ci --omit=dev)
+
+cd deploy
+zip -r ../deploy.zip . -x "*.DS_Store"
+cd ..
+
+az webapp deploy \
+  --resource-group ai-103-rg \
+  --name elcorrectobackend \
+  --src-path deploy.zip \
+  --type zip
+```
+
+This builds a production-only package (compiled `dist/` plus `node_modules` installed without dev dependencies) and pushes it to the `elcorrectobackend` App Service. Requires being logged in via `az login` with access to the `ai-103-rg` resource group.
+
 ## TODO
 
 - Replace browser-based Auth0 token persistence with a server-side authentication flow using an HttpOnly session cookie.
