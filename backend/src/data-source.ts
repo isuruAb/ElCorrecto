@@ -20,7 +20,10 @@ let initPromise: Promise<DataSource> | null = null
 
 export const getDataSource = (): Promise<DataSource> => {
   if (!initPromise) {
-    initPromise = AppDataSource.initialize()
+    initPromise = AppDataSource.initialize().catch((error) => {
+      initPromise = null
+      throw error
+    })
   }
   return initPromise
 }
